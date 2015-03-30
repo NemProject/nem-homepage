@@ -1,4 +1,4 @@
-﻿{
+{
    "READ-Translators": "Directly below are different links for this site, change the links only if you can find a better alternative in the language you are translating to, and you are familiar with basic HTML. Anything that starts with 'READ' is a message to the translators, and it does not need to be translated.",
 
    "a": {
@@ -49,17 +49,17 @@
    },
    "nav":{
       "client": "SOVELLUS",
-      "buy": "OSTA XEM:iä",
+      "buy": "OSTA XEM-valuuttaa",
       "blog": "BLOGI",
       "faq": "UKK",
       "tech": "<span>KEHITTÄJÄ $t(a.i)</span>",
-      "update": "PÄIVITYKSET",
+      "update": "TUOREIMMAT UUTISET",
       "lang": "<span>SUOMI $t(a.i)</span>",
       "READ-Translators4": "lang output should be the name of the translated language"
    },
    "clients":{
       "header1": "NEM Community Client",
-      "about1": "Avaa NEM Beta Client kaikilla ominaisuuksilla internetselaimessari. Helppo kaksivaiheinen prosessi.",
+      "about1": "Avaa NEM Beta Client kaikilla ominaisuuksilla internet-selaimessasi. Helppo kaksivaiheinen prosessi.",
       "click1": "ASENNA NEM COMMUNITY CLIENT",
       "help1": "Tarvitsetko apua NEM clientin asennuksessa? $t(a.1) <span>Katso helppokäyttöistä ohjettamme</span></a>",
 
@@ -147,8 +147,8 @@
 
       "nem-cryptoContent": "NEM ei ole ainoastaan kryptovaluutta, vaan se on vertaisverkkoalusta, joka mahdollistaa mm. maksujen tekemisen, viestien lähettämisen, omaisuuden vaihdannan sekä älykkäät sopimukset (smart contracts) käyttäjien kesken. Lisää ominaisuuksia on vielä tulossa, sillä NEM on alati kehittyvä alusta.",
 
-      "why-nemContent": "Bitcoin on kryptovaluutta samalla tapaa kuin monet muutkin kryptokolikot ovat. Jotkin ovat tarkoitettuja vain tietyille ohjelmistoille, jotkut ovat taas puhtaita kryptokolikoita. NEM erottuu muista kryptovaluutoista olemalla ratkaisualusta. Ratkaisualustana NEM pystyy tarjoamaan paljon enemmän kuin olemalla pelkästään kryptovaluutta. Kryptovaluuttana NEM ei tarvitse paljon tehoa tietokoneelta eikä verkon osana oleminen kuluta paljon energiaa. NEM puoltaa myös helppoa käyttöönottamista Proof of Importancen (POI) muodossa, sillä et enää tarvitse (kuten muilla kryptovaluutoilla) tehokkaita tietokoneita tai suurta omistusosuutta louhiaksesi lisää kryptovaluuttaa. NEM kutsuu tätä louhinnaksi. Tämän lisäksi NEM käyttää Eigentrust++ teknologiaa löytääkseen ja seuloakseen pahantekijät verkosta. Yhä parempia asioita on vielä tulossa, sillä NEM on alati kehittyvä ratkaisualusta. Aloitusvaiheessa NEM tarjoaa tämän:",
-      "why-nem-1": "Ensimmäinen blockchain-teknologiaan perustuva multisig-ratkaisu.",
+      "why-nemContent": "Bitcoin on kryptovaluutta samalla tapaa kuin monet muutkin kryptokolikot ovat. Jotkin ovat tarkoitettuja vain tietyille ohjelmistoille, jotkut ovat taas puhtaita kryptokolikoita. NEM erottuu muista kryptovaluutoista olemalla ratkaisualusta. Ratkaisualustana NEM pystyy tarjoamaan paljon enemmän kuin olemalla pelkästään kryptovaluutta. Kryptovaluuttana NEM ei tarvitse paljon tehoa tietokoneelta eikä verkon osana oleminen kuluta paljon energiaa. NEM puoltaa myös helppoa käyttöönottamista Proof of Importancen (POI) muodossa, sillä et enää tarvitse (kuten muilla kryptovaluutoilla) tehokkaita tietokoneita tai suurta omistusosuutta louhiaksesi lisää kryptovaluuttaa. NEM kutsuu tätä louhinnaksi. Tämän lisäksi NEM käyttää Eigentrust++ -teknologiaa löytääkseen ja seuloakseen pahantekijät verkosta. Yhä parempia asioita on vielä tulossa, sillä NEM on alati kehittyvä ratkaisualusta. Aloitusvaiheessa NEM tarjoaa tämän:",
+      "why-nem-1": "Ensimmäinen lohkoketju-teknologiaan perustuva multisig-ratkaisu.",
       "why-nem-2": "Ratkaisu kryptattujen viestien lähettämiseen.",
       "why-nem-3": "Louhinta: Sinun ei tarvitse pitää lompakkoasi avoinna kun louhinta on aloitettu. Lompakon voi sulkea eikä sen tarvitse olla yhteydessä verkkoon.",
       "why-nem-4": "Suojattu lompakko: Lompakon ei tarvitse olla yhteydessä internetiin. Se voi pysyä piilossa palomuurin takana ja olla yhteydessä NIS:iin ainoastaan LAN-verkossa.",
@@ -158,7 +158,7 @@
 
       "whats-xemContent": "\"XEM\" on NEM:n valuuttakoodi samassa merkityksessä kuin USD, EUR, CNY, JPY jne. ovat",
 
-      "loyalty-pointsContent": "NEM:n uskollisuusbonukset tulevat louhinnan myötä. Ne ovat korvauksia NEM:n käyttämisestä siirtojen tekoon. Mitä enemmän teet siirtoja ja mitä suurempi XEM-saldo sinulla on, sitä useammin saat korvauksia. Korvauksen määrä on sattumanvarainen, joskus saat enemmän ja joskus taas vähemmän, riippuen siitä minkä blockin saat louhittua.",
+      "loyalty-pointsContent": "NEM:n uskollisuusbonukset tulevat louhinnan myötä. Ne ovat palkkioita NEM:n käyttämisestä siirtojen tekoon. Mitä enemmän teet siirtoja ja mitä suurempi XEM-saldo sinulla on, sitä useammin saat palkkioita. Palkkio määrä on sattumanvarainen, joskus saat enemmän ja joskus taas vähemmän, riippuen siitä, minkä lohkon saat louhittua.",
 
       "OS-supportContent": "64-Bittisellä Javalla pystyt käyttämään NEM:iä kaikilla suosituimmilla käyttöjärjestelmillä, kuten Windowsilla, Macilla ja Linuxilla.",
 
@@ -172,11 +172,11 @@
       "javaText": "Tarkista mikä Javan versio sinulla on asennettuna $t(a.javaCheck)TÄÄLTÄ</a>. Jos käytössäsi on Java version 8, update 25 tai uudempi, voit asentaa NEM Clientin.<br>Kun valitset Javan bittiversiota (32- tai 64-bittinen), varmista, että valitset bittiversion selaimesi version mukaan. Tietokoneen käyttöjärjestelmän tai prosessorin bittimäärällä ei ole tässä asiassa merkitystä. Selaimen bittiversion selvittämisestä oli aiemmin puhetta $t(a.5)täällä.</a>",
 
       "javaWindowsHead": "Javan asennus Windowsille",
-      "javaWindowsVideo": "Tästä löydät videon $t(app.tut) Java 8:n asennuksesta Windows 8:lle. Vaikkakin videon ohjeet ovat tehty Java 7:lle, ne toimivat myös Java 8:n asennuksessa. Kun valitset Javan bittiversiota (32- tai 64-bittinen), varmista, että valitset bittiversion selaimesi version mukaan. Selaimen bittiversion selvittämisestä oli aiemmin puhetta $t(a.5)täällä.</a>",
+      "javaWindowsVideo": "Tästä löydät $t(app.tut)videon Java 8:n asennuksesta Windows 8:lle. Vaikkakin videon ohjeet ovat tehty Java 7:lle, ne toimivat myös Java 8:n asennuksessa. Kun valitset Javan bittiversiota (32- tai 64-bittinen), varmista, että valitset bittiversion selaimesi version mukaan. Selaimen bittiversion selvittämisestä oli aiemmin puhetta $t(a.5)täällä.</a>",
       "javaWindowsMan": "Löydät myös Wikihow:n ohjeen Java 8:n asennuksesta $t(a.javaWindowsM)TÄÄLTÄ</a>",
 
       "javaMacHead": "Javan asennus MAC OSX:lle",
-      "javaMacVideo": "Tästä löydät videon $t(app.tut) Java 8:n asennuksesta Mac OSX:lle. Kun valitset Javan bittiversiota (32- tai 64-bittinen), varmista, että valitset bittiversion sen mukaan moniko bittinen selaimesi versio on. Selaimen bittiversiosta oli aiemmin puhetta $t(a.5)täällä.</a>",
+      "javaMacVideo": "Tästä löydät $t(app.tut)videon Java 8:n asennuksesta Mac OSX:lle. Kun valitset Javan bittiversiota (32- tai 64-bittinen), varmista, että valitset bittiversion sen mukaan moniko bittinen selaimesi versio on. Selaimen bittiversiosta oli aiemmin puhetta $t(a.5)täällä.</a>",
       "javaMacMan": "Löydät myös hyvänAlso the Java website has a good Mac OSX install $t(app.tut), that can be found $t(a.javaMacM)HERE</a>",
 
       "javaLinuxHead": "Javan asennus Linuxille",
@@ -196,16 +196,16 @@
       "install-nem-alone-2": "Windows: Seuraa NEM-yhteisön tekemiä ohjeita $t(a.nemWindowsTut)$t(app.tut)</a>.",
       "install-nem-alone-3": "Mac: Seuraa NEM-yhteisön tekemiä ohjeita $t(a.nemMacTut)$t(app.tut)</a>.",
       "install-nem-alone-4": "Ubuntu (Linux): Seuraa NEM-yhteisön tekemiä ohjeita $t(a.nemLinuxTut)$t(app.tut)</a>.",
-      "install-nem-alone-5": "Jos haluat sallia yhteydet LAN-verkkosi ulkopuolelta, sinun täytyy avata portti 7890 palomuuristasi. Ohjeen portin avaamiseen löydät $t(a.portGuide)tästä linkistä</a>. Toissijaisesti voit katsoa ohjeen myös \"$t(a.6)How do I open Port 7890?</a>\" -kohdasta UKK-sivulla. Ota huomioon, että tämä ei ole pakollista ja sitä suositellaan vain edistyneimmille käyttäjille.",
+      "install-nem-alone-5": "Jos haluat sallia yhteydet LAN-verkkosi ulkopuolelta, avaa portti 7890 palomuuristasi. Ohjeen portin avaamiseen löydät $t(a.portGuide)tästä linkistä</a>. Toissijaisesti, voit katsoa ohjeen myös \"$t(a.6)Miten voin avata portin 7890?</a>\" -kohdasta UKK-sivulla. Ota huomioon, että tämä ei ole pakollista ja sen tekemistä suositellaan vain edistyneimmille käyttäjille.",
 
       "get-xemContent": "Voit hankkia XEM:iä täältä:",
       "exchange-1": "POLONIEX",
       "exchange-2": "BITTREX",
       "exchange-3": "BTC38",
-      "exchange-guide": "Tästä löydät $t(a.exchangeGuide)$t(app.tut)</a> keskustelualueellamme, joka opastaa miten ostaa XEM:iä Bitcoineilla.",
+      "exchange-guide": "Tästä löydät $t(a.exchangeGuide)$t(app.tut)en</a> keskustelualueellamme, joka opastaa miten voit ostaa XEM:iä Bitcoineilla.",
 
       "nccContent": "NCC on lyhennys sanoista NEM Community Client. Lyhyesti selitettynä se on lompakko, mutta emme kuitenkaan nimenneet sitä lompakoksi, koska se pystyy paljon muuhunkin kuin vain pelkkä lompakko.",
-      "nisContent": "NIS on lyhennys sanoista Network Infrastructure Server. NIS on osa NEM-verkkoa samalla tapaa kuin käyttäjät ovat osa p2p-verkkoa. Se varmistaa, että verkko ja blockchain pysyvät koko ajan terveinä. NIS on sekä Web-, että ohjelmistopalvelin webarkkitehtuurissa. Se on kevyt, mutta silti tehokas palvelin. Jokainen NCC voi käyttää NIS:tä siirtojen tekemiseen. Voit asettaa NIS:n tehtäväksi louhia NCC:n kautta ilman, että paljastaisit itsesi koko verkolle.",
+      "nisContent": "NIS on lyhennys sanoista Network Infrastructure Server. NIS on osa NEM-verkkoa samalla tapaa kuin käyttäjät ovat osa p2p-verkkoa. Se varmistaa, että verkko ja lohkoketju pysyvät koko ajan terveinä. NIS on sekä Web-, että ohjelmistopalvelin webarkkitehtuurissa. Se on kevyt, mutta silti tehokas palvelin. Jokainen NCC voi käyttää NIS:tä siirtojen tekemiseen. Voit asettaa NIS:n tehtäväksi louhia NCC:n kautta ilman, että paljastaisit itsesi koko verkolle.",
 
       "nis-or-ncc-mem": "Muistia: 768 MB RAM",
       "nis-or-ncc-cpu": "Prosessori: 700 MHz",
@@ -223,23 +223,23 @@
 
       "run-node-1": "Lataa, asenna ja käynnistä NEM Infastructure Server $t(a.bobNemNinja)(NIS)</a>.",
       "run-node-2": "Vaativampaan käyttöön:",
-      "run-node-3": "Jos haluat jakaa NIS:si tai jos haluat ottaa yhteyden siihen internetistä, $t(a.6)avaa portti 7890</a> reitittimestäsi/palomuuristasi siltä tietokoneelta, jolla sinulla on NIS käynnissä. Tämä vaaditaan jos haluat olla yhteydessä NIS:iin LAN-verkkosi ulkopuolelta. Sinun ei tarvitse avata edellä mainittua porttia jos käytät NCC:tä vain LAN-verkossasi.",
-      "run-node-4": "Huomioi, että voit antaa muiden vapaasti käyttää NIS-palvelintasi siirtojen tekoon ilman, että vaarantaisit omaa turvallisuuttasi. Salasana ja private keyt eivät koskaan poistu lompakostasi, joka on NCC:ssäsi. Emme suosittele, että käyttäisit NCC:tä samalla tietokoneella kuin NIS-palvelin, jos tarkoituksesi on pitää NIS:iä koko ajan päällä.",
+      "run-node-3": "Jos haluat jakaa NIS:si tai jos haluat ottaa yhteyden siihen internetistä, $t(a.6)avaa portti 7890</a> reitittimestäsi/palomuuristasi sille tietokoneelle, jolla NIS on käynnissä. Tämä vaaditaan jos haluat olla yhteydessä NIS:iin LAN-verkkosi ulkopuolelta. Sinun ei tarvitse avata edellä mainittua porttia jos käytät NCC:tä vain LAN-verkossasi.",
+      "run-node-4": "Huomioi, että voit antaa muiden vapaasti käyttää NIS-palvelintasi siirtojen tekoon ilman, että vaarantaisit omaa turvallisuuttasi. Salasana ja private keyt eivät koskaan poistu lompakostasi, joka on NCC:ssäsi. Emme suosittele, että käytät NCC:tä samalla tietokoneella kuin NIS-palvelin on, jos tarkoituksenasi on pitää NIS:iä koko ajan päällä.",
 
       "mobile-walletContent": "Mobiililompakko on kehitteillä ja se tullaan julkaisemaan pian sekä iOS:lle että Androidille.",
 
       "install-help-1": "Jos tarvitset apua, katso <a href=\"https://github.com/NewEconomyMovement/NemCommunityClient/issues\">issues</a> -sivua githubissa.",
       "install-help-2": "Lue NEM-blogia (Tulossa pian)",
 
-      "whats-poiContent": "POI on lyhennys sanoista \"Proof-of-Importance\". Se on algoritmi aivan NEM-ohjelmiston ytimessä. Mitä tärkeämpi (importance) olet NEM-verkolle, sitä useammin pystyt käsittelemään blockin (ja louhimaan blockin sisältämät siirtokulut). Tärkeytesi NEM-verkolle riippuu monesta muuttujasta, kuten siitä kuinka paljon siirtoja teet ja kenen kanssa niitä teet. Jos et tee yhtään siirtoja, tärkeytesi perustuu ainoastaan tilisi saldoon (samalla tapaa kuin proof-of-stake valuutoissa).",
+      "whats-poiContent": "POI on lyhennys sanoista \"Proof-of-Importance\". Se on algoritmi aivan NEM-ohjelmiston ytimessä. Mitä korkeampi merkityksesi (importance) on NEM-verkolle, sitä useammin pystyt käsittelemään lohkon (ja louhimaan lohkon sisältämät siirtokulut). Merkityksesi NEM-verkolle riippuu monesta eri muuttujasta, kuten siitä kuinka paljon ja kenen kanssa teet siirtoja. Jos et tee yhtään siirtoja, tärkeytesi perustuu ainoastaan tilisi saldoon (samalla tapaa kuin proof-of-stake valuutoissa).",
 
-      "multisigContent": "Jos teet tilistäsi multi-user accountin (ts. multisig), voit lähettää maksuja ainoastaan silloin, kun ennalta määrätty määrä muita henkilöitä allekirjoittaa siirtosi (ts. hyväksyy sen). Tämä ominaisuus on erittäin käytännöllinen niissä tilanteissa, kun rahojen hallintaa ei ole haluttu antaa vain yhdelle henkilölle.",
+      "multisigContent": "Jos teet tilistäsi multi-user accountin (ts. multisig), voit lähettää maksuja ainoastaan silloin, kun ennalta määrätty määrä muita henkilöitä allekirjoittaa siirtosi (ts. hyväksyy sen). Tämä ominaisuus on erittäin käytännöllinen esim. niissä tilanteissa, kun varoja ei ole haluttu antaa vain yhden henkilön hallintaan.",
 
-      "whats-harvest-1": "Louhinta on prosessi, jossa verkon käyttäjät validioivat blockin dataa, jonka jälkeen tämä block tulee osaksi blockien ketjua, blockchainia. Kun block on osa blockchainia, tulee siitä peruuttamaton ja muuttumaton osa sitä, paitsi jos datassa esiintyy jokin konflikti. Siinä tapauksessa blockchain korjaa itsensä automaattisesti.",
-      "whats-harvest-2": "Tämä block sisältää dataa siirroista, jotka ovat tapahtuneet n. yhden minuutin sisällä. Toisin sanoen, louhintaa tapahtuu verkossa noin minuutin välein. Datan käsittely ja sen laittaminen blockiin edellyttää, että tietokone tekee jonkin verran työtä. Blockin voi louhia ainoastaan yksi tili kerrallaan koko NEM-verkossa, ja tämän tilin valinta on suhteellisen sattumanvarainen, johon vaikuttaa muutama muuttuja.",
-      "whats-harvest-3": "Blockin louhinut tili saa korvauksen tehdystä työstä. Korvauksen määrä riippuu siirtomaksujen yhteenlasketusta määrästä louhitussa blockissa.",
+      "whats-harvest-1": "Louhinta on prosessi, jossa verkon käyttäjät validioivat (vahvistavat) lohkon dataa, jonka jälkeen tämä lohko tulee osaksi lohkojen ketjua, lohkoketjua. Kun lohko on osa lohkoketjua, tulee siitä peruuttamaton ja muuttumaton osa sitä, paitsi jos datassa esiintyy jokin konflikti. Siinä tapauksessa lohkoketju korjaa itse itsensä automaattisesti.",
+      "whats-harvest-2": "Tämä lohko sisältää dataa siirroista, jotka ovat tapahtuneet n. yhden minuutin sisällä. Toisin sanoen, louhintaa tapahtuu verkossa noin minuutin välein. Datan käsittely ja sen laittaminen lohkoon edellyttää, että tietokone tekee jonkin verran työtä. Lohkon voi louhia ainoastaan yksi tili kerrallaan koko NEM-verkossa, ja tämän tilin valinta on suhteellisen sattumanvarainen, johon vaikuttaa muutama muuttuja.",
+      "whats-harvest-3": "Lohkon louhinut tili saa palkkion tehdystä työstä. Palkkion määrä riippuu siirtomaksujen yhteenlasketusta määrästä louhitussa lohkossa.",
 
-      "how-harvestContent": "Kirjaudu sisään lompakkoosi ja klikkaa kohtaa \"Start local harvesting\". <br><br>Requirement: The user account needs a vested balance of at least 10,000 XEM.",
+      "how-harvestContent": "Kirjaudu sisään lompakkoosi ja klikkaa kohtaa \"Aloita paikallinen louhinta\". <br><br>Vaatimus: Tilin saldo täytyy olla vähintään 10,000 XEM.",
 
       "open-port-1": "Voit avata portin 7890 kirjautumalla sisään palomuuriisi. Avaa portti 7890 port forwarding -kohdassa ja kohdista se siihen ip-osoitteeseen, missä NIS on käynnissä. On suositeltavaa, että ip-osoitteesi LAN-verkossa olisi muuttumaton, sillä jos ip-osoitteesi muuttuu, NCC ei enää pysty yhdistämään NIS:iin. Googlesta voit löytää apua muuttumattoman ip-osoitteen luomiseen. Lyhyesti sanottuna, sinun täytyy antaa ip-osoite verkkosovittimelle. Sinun täytyy myös antaa DNS-osoite, joka on yleensä reitittimesi ip-osoite LAN-verkossa.",
       "open-port-2": "Windowsissa voit tarkistaa päätteesi IP-osoitteen kirjoittamalla komentoriville komennon <span>ipconfig</span>",
@@ -253,18 +253,18 @@
       "open-port-5": "Jos käytät Windowsia ja olet IPv4:ssä (mikä on todennäköisintä), avaa portti 7890 tuon ip-osoitteen kohdalta (ja kohdista liikenne sinne) reitittimestäsi ja tallenna muutokset. Macissa löydät ip-osoitteesi todennäköisimmin kohdasta <span>inet</span>.",
       "open-port-6": "Jos sinulla on käytössä dynaaminen ip-osoite, mikä on todennäköisintä, sinun täytyy tehdä hieman enemmän työtä jos haluat yhdistää NIS:iin ulkopuolelta. Toivoisimme, että dynamic dns on sinulle tuttu, ja että olet asentanut sen sille koneelle, missä NIS on myös käynnissä. Aloitusohjeena mene sivulle $t(a.noIp)no-ip.com</a> ja rekisteröi itsellesi tunnus. Tämän jälkeen lataa $t(a.noIpWin)the DUC</a> Windowsille (Jos käytät Mac:ia, paina $t(a.noIpMac)TÄSTÄ</a>, ja jos käytät Linuxia, paina $t(a.noIpLinux)TÄSTÄ</a>) ja asenna se sille koneelle, missä NIS on käynnissä. Lue ohje konfiguroinnista $t(a.noIpConfig)TÄÄLTÄ</a>",
       "open-port-7": "Ohjeen tarkkaan lukemalla sinun pitäisi pystyä yhdistämään NIS:iin LAN-verkkosi ulkopuolelta.",
-      "open-port-8": "Lopuksi mene NCC:n asetuksiin ja kirjoita NIS:n domain name ip-osoitteen sijasta. Sen pitäisi olla suurinpiirtein tällainen <span>xxx.ddns.net</span>, tämä on hostname, jonka olet konfiguroinut DUC:ssa. Jos löydät reitittimesi asetuksista kohdan \"loopback in the port forwarding\", laita rasti tähän ruutuun. Tämä mahdollistaa sen, että dynamic dns voi loopbackata NIS:iin milloin tahansa kun yhdistät osoitteeseen <span>xxx.ddns.net</span> LAN-verkostasi.",
+      "open-port-8": "Lopuksi, mene NCC:n asetuksiin ja kirjoita NIS:n domain name ip-osoitteen sijasta. Sen pitäisi olla suurinpiirtein tällainen <span>xxx.ddns.net</span>, tämä on hostname, jonka olet konfiguroinut DUC:ssa. Jos löydät reitittimesi asetuksista kohdan \"loopback in the port forwarding\", laita rasti tähän ruutuun. Tämä mahdollistaa sen, että dynamic dns voi loopbackata NIS:iin milloin tahansa kun yhdistät osoitteeseen <span>xxx.ddns.net</span> LAN-verkostasi.",
       "open-port-9": "Lisätietoja reitittimistä ja niiden asetuksista voit löytää NEM:n keskustelualueelta:",
       "open-port-10": "Easy $t(a.easyConfig)configuration guide</a>.",
       "open-port-11": "Multiple modem $t(a.multiConfig)configuration guide</a>.",
 
-      "xem-existContent": "XEM:iä on olemassa yhteensä 8,999,999,999.",
+      "xem-existContent": "XEM-valuuttaa on olemassa yhteensä 8,999,999,999.",
 
       "community-fundContent": "NEM community fund on rahasto, joka on jokaisen käytettävissä. Sen käyttöön sisältyy vain yksi ehto: sinun täytyy vakuuttaa yhteisö tukemaan ideaasi. Tarkempia tietoja yhteisön äänestysmenettelystä tullaan antamaan tulevaisuudessa.",
 
       "nem-distributionContent": "NEM esilouhittiin 100-prosenttisesti ja jaettiin n. 1500 osuudenhaltijan kesken.",
 
-      "issue-coinsContent": "Kyllä, yksinkertaisesti vastattuna. Voit laskea liikkeelle omia kolikoita, kun NEM assets tulee saataville. Hyödyt samalla NEM:n tarjoamasta turvallisuudesta ja luotettavuudesta. Se onkin koko NEM-alustan tarkoitus. NEM tarjoaa paljon joustavuutta kolikoiden liikkeeseen laskemiseen eikä se rajoita niiden käyttötarkoitusta mitenkään.",
+      "issue-coinsContent": "Kyllä, yksinkertaisesti vastattuna. Voit laskea liikkeelle omia kolikoita, kun NEM-assets tulee saataville. Hyödyt samalla NEM:n tarjoamasta turvallisuudesta ja luotettavuudesta. Se onkin koko NEM-alustan tarkoitus. NEM tarjoaa paljon joustavuutta kolikoiden liikkeeseen laskemiseen eikä se rajoita niiden käyttötarkoitusta mitenkään.",
 
       "nem-indepth-2": "NCC:n lähdekoodin löydät täältä $t(a.nccSource)",
       "nem-indepth-3": "NEM $t(a.nisApi) resource"
