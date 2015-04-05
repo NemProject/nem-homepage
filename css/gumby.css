@@ -2063,10 +2063,6 @@ a.anchor { display: block; position: relative; top: -200px; visibility: hidden; 
 
 .sigSmall { font-size: 10px; font-size: 101%; margin-top: 20px; }
 
-@media only screen and (max-width: 767px) { .clientMed { margin-top: 20px; } }
-
-@media only screen and (max-width: 767px) { #install p { margin-top: 20px; } }
-
 @media only screen and (max-width: 767px) { #modal1 { display: none; } }
 
 @media only screen and (max-width: 767px) { .dropdown { min-width: 100px; max-width: 140px !important; margin-left: 50% !important; } }
@@ -2178,7 +2174,7 @@ a.anchor { display: block; position: relative; top: -200px; visibility: hidden; 
 
 @media only screen and (max-width: 868px) { #newsFeed ul .user { margin-bottom: 20px; } }
 
-@media only screen and (max-width: 767px) { #newsFeed { margin-top: 3%; margin-bottom: 30px; margin-right: 20px; margin-left: 20px; }
+@media only screen and (max-width: 767px) { #newsFeed { margin-top: 3%; margin-bottom: 30px; padding-right: 20px; padding-left: 20px; }
   #newsFeed ul li { margin-bottom: 3%; padding: 5%; background-color: white; min-height: 200px; }
   #newsFeed ul li .tweet { margin-top: 10%; margin-bottom: 5%; overflow: hidden !important; } }
 
@@ -2211,3 +2207,9 @@ a.anchor { display: block; position: relative; top: -200px; visibility: hidden; 
 @media only screen and (max-width: 367px) { .headingArchive { padding-left: 20%; margin: 0 auto !important; }
   .headingArchive a { font-size: 16px; }
   .headingArchive h4 { font-size: 18px; } }
+
+@media only screen and (max-width: 767px) { .clientMed { margin-top: 20px; } }
+
+@media only screen and (max-width: 767px) { #install p { margin-top: 20px; } }
+
+@media only screen and (max-width: 767px) { .installer { padding-right: 20px; padding-left: 20px; } }

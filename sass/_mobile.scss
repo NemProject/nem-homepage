@@ -336,10 +336,7 @@
 
 #newsFeed ul{
    @include respond("max-width: 1068px") {
-   margin-top: 4%;
-      li{ //twitter boxes
-
-      }
+      margin-top: 4%;
    }
 }
 #newsFeed ul .user{
@@ -351,8 +348,8 @@
    @include respond("max-width: 767px") {
    margin-top: 3%;
    margin-bottom: 30px;
-   margin-right: 20px;
-   margin-left: 20px;
+   padding-right: 20px;
+   padding-left: 20px;
 
    ul li{ //twitter boxes
       margin-bottom: 3%;
@@ -459,4 +456,23 @@ h4{
    font-size: 18px;
 }
 }
+}
+//** ####################### **//
+//** INSTALL.HTML PAGE CSS START **//
+//** ####################### **//
+.clientMed{
+   @include respond("max-width: 767px") {
+      margin-top: 20px;
+   }
+}
+#install p{
+   @include respond("max-width: 767px") {
+      margin-top: 20px;
+   }
+}
+.installer{
+   @include respond("max-width: 767px") {
+      padding-right: 20px;
+      padding-left: 20px;
+   }
 }

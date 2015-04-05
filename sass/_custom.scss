@@ -1056,25 +1056,6 @@ a.anchor{display: block; position: relative; top: -200px; visibility: hidden;}
 //** ####################### **//
 //** INSTALL.HTML PAGE CSS START **//
 //** ####################### **//
-// .installer{
-//    text-align: center;
-//    background-color: $darkGray;
-//    padding-top: 70px;
-//    padding-bottom: 70px;
-//    .statNumbers{
-//       font-size: 300%;
-//       margin-bottom: 20px;
-//       color: $green;
-//       font-weight: 300;
-//    }
-//    .statWords{
-//       font-size: $norm;
-//       color: $white;
-//    }
-//    .statInfo{
-//       margin-top: 0;
-//    }
-// }
 #install{
    a{
       @include transition(all 1s);
@@ -1120,16 +1101,7 @@ a.anchor{display: block; position: relative; top: -200px; visibility: hidden;}
    font-size: 101%;
    margin-top: 20px;
 }
-.clientMed{
-   @include respond("max-width: 767px") {
-      margin-top: 20px;
-   }
-}
-#install p{
-   @include respond("max-width: 767px") {
-      margin-top: 20px;
-   }
-}
+
 
 
 
