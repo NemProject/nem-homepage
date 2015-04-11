@@ -76,7 +76,7 @@
    "buy":{
       "header": "如何获取XEM？",
       "box1": "正式发布后，XEM将很快可在BITTREX交易",
-      "box1click": "$t(app.coming)",
+      "box1click": "$t(app.now)",
       "box2": "正式发布后，XEM将很快可在POLONIEX交易",
       "box2click": "$t(app.now)",
       "box3": "直接使用现金购买XEM",

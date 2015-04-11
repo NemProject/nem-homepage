@@ -70,9 +70,9 @@
    },
    "buy":{
       "header": "How to get XEM?",
-      "box1": "XEM will be available at BITTREX shortly after launch",
-      "box1click": "$t(app.coming)",
-      "box2": "XEM will be available at POLONIEX shortly after launch",
+      "box1": "XEM is available at BITTREX, get your XEM now.",
+      "box1click": "$t(app.now)",
+      "box2": "XEM is available at POLONIEX, the first exchange to list XEM",
       "box2click": "$t(app.now)",
       "box3": "Buy XEM directly with cash",
       "box3click": "$t(app.coming)",
