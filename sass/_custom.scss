@@ -396,16 +396,16 @@ z-index: 160;
    margin-top: 20px;
    background-color: $white;
    .inside {
-      @include fancytiles(3,3,3);
+      @include fancytiles(5,5,2);
    }
    .inside img{
       max-height: 16px;
    }
-   /*
+
    .inside2 img{
       max-height: 20px !important;
    }
-   */
+
 }
 .buyGuide{
    margin-top: 50px;

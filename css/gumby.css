@@ -1822,15 +1822,13 @@ i.icon-down-open-big { margin: 0; }
 
 .button { margin: .4em; padding: .8em; cursor: pointer; background: transparent; text-decoration: none; border: 3px solid #444444; color: #555555; font-weight: 500; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 160px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
 
-.border.otherXchange { min-height: 30px; padding: 1% 0% .5% 0%; margin-top: 20px; background-color: white; /*
-.inside2 img{ max-height: 20px !important;
-}
-*/ }
-.border.otherXchange .inside { display: inline-block; float: left; padding-left: 0.96154%; padding-right: 0.96154%; width: 33.33333%; }
-@media only screen and (min-width: 0px) { .border.otherXchange .inside { width: 33.33333%; } }
-@media only screen and (min-width: 768px) { .border.otherXchange .inside { width: 33.33333%; } }
-@media only screen and (min-width: 1040px) { .border.otherXchange .inside { width: 33.33333%; } }
+.border.otherXchange { min-height: 30px; padding: 1% 0% .5% 0%; margin-top: 20px; background-color: white; }
+.border.otherXchange .inside { display: inline-block; float: left; padding-left: 0.96154%; padding-right: 0.96154%; width: 50%; }
+@media only screen and (min-width: 0px) { .border.otherXchange .inside { width: 50%; } }
+@media only screen and (min-width: 768px) { .border.otherXchange .inside { width: 20%; } }
+@media only screen and (min-width: 1040px) { .border.otherXchange .inside { width: 20%; } }
 .border.otherXchange .inside img { max-height: 16px; }
+.border.otherXchange .inside2 img { max-height: 20px !important; }
 
 .buyGuide { margin-top: 50px; margin-bottom: 70px !important; padding-top: 10px; margin-bottom: 10px; width: 100% !important; margin-bottom: 30px; background-color: transparent; text-align: center; position: relative; left: -40px; opacity: 0; -webkit-transition: all 0.8s; -moz-transition: all 0.8s; -o-transition: all 0.8s; transition: all 0.8s; -webkit-transition-timing-function: ease-out; -moz-transition-timing-function: ease-out; -o-transition-timing-function: ease-out; transition-timing-function: ease-out; }
 .buyGuide h5 { font-size: 18px; }
