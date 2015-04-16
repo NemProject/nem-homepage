@@ -50,9 +50,10 @@
       "client": "用户",
       "buy": "购买XEM",
       "blog": "BLOG",
+      "support": "<span>SUPPORT $t(a.i)</span>",
       "tutorial": "TUTORIALS",
+      "helpdesk": "HELP DESK",
       "faq": "常见问题与解答",
-      "tech": "<span>开发人员 $t(a.i)</span>",
       "update": "更新",
       "lang": "<span>中文（简体） $t(a.i)</span>",
       "READ-Translators4": "lang output should be the name of the translated language"

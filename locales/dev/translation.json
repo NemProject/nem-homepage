@@ -52,7 +52,9 @@
       "buy": "BUY XEM",
       "newsletter": "NEWSLETTER",
       "faq": "FAQ's",
-      "tech": "<span>DEVELOPER $t(a.i)</span>",
+      "support": "<span>SUPPORT $t(a.i)</span>",
+      "tutorial": "TUTORIALS",
+      "helpdesk": "HELP DESK",
       "update": "UPDATES",
       "lang": "<span>ENGLISH $t(a.i)</span>",
       "READ-Translators4": "lang output should be the name of the translated language"

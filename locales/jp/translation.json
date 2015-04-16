@@ -51,9 +51,10 @@
       "client": "CLIENT",
       "buy": "BUY XEM",
       "blog": "BLOG",
+      "support": "<span>SUPPORT $t(a.i)</span>",
       "tutorial": "TUTORIALS",
+      "helpdesk": "HELP DESK",
       "faq": "FAQ's",
-      "tech": "<span>DEVELOPER $t(a.i)</span>",
       "update": "UPDATES",
       "lang": "<span>ENGLISH $t(a.i)</span>",
       "READ-Translators4": "lang output should be the name of the translated language"

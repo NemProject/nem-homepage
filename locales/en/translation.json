@@ -51,9 +51,10 @@
       "client": "CLIENT",
       "buy": "BUY XEM",
       "blog": "BLOG",
+      "support": "<span>SUPPORT $t(a.i)</span>",
       "tutorial": "TUTORIALS",
+      "helpdesk": "HELP DESK",
       "faq": "FAQ's",
-      "tech": "<span>DEVELOPER $t(a.i)</span>",
       "update": "UPDATES",
       "lang": "<span>ENGLISH $t(a.i)</span>",
       "READ-Translators4": "lang output should be the name of the translated language"
@@ -92,10 +93,10 @@
 
       "articles": "Articles",
       "articles1": "NEM on Vice",
-      "articles2": "NEM Yahoo Finance",
-      "articles3": "NEM Cointelegraph",
-      "articles4": "",
-      "articles5": "",
+      "articles2": "Yahoo Finance",
+      "articles3": "Cointelegraph",
+      "articles4": "Q&A All Coins News",
+      "articles5": "Sunny King on NEM",
       "articles6": "",
 
       "newsletters": "Newsletter",

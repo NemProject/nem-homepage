@@ -13,6 +13,8 @@ $.i18n.init({
 		$('#navclient').text($.t('nav.client'));
 		$('#navbuy').text($.t('nav.buy'));
 		$('#blog').text($.t('nav.blog'));
+		$('#support').i18n();
+		$('#helpdesk').text($.t('nav.helpdesk'));
 		$('#tutorial').text($.t('nav.tutorial'));
 		$('#navfaq').text($.t('nav.faq'));
 		$('#navtech').text($.t('nav.tech'));

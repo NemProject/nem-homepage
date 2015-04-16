@@ -50,9 +50,10 @@
       "client": "SOVELLUS",
       "buy": "OSTA XEM:iä",
       "blog": "BLOGI",
+      "support": "<span>SUPPORT $t(a.i)</span>",
       "tutorial": "TUTORIALS",
+      "helpdesk": "HELP DESK",
       "faq": "UKK",
-      "tech": "<span>KEHITTÄJÄ $t(a.i)</span>",
       "update": "PÄIVITYKSET",
       "lang": "<span>SUOMI $t(a.i)</span>",
       "READ-Translators4": "lang output should be the name of the translated language"
