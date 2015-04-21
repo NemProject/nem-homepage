@@ -73,7 +73,7 @@
       "nis": "NIS Online",
       "acc": "accounts in use",
       "dorm": "accounts that are dormant",
-      "avg": "NEM in accounts"
+      "ver": "NEM in accounts"
    },
    "buy":{
       "header": "How to get XEM?",

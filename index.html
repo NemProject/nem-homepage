@@ -56,6 +56,7 @@
       </script>
    </head>
    <body>
+      <div class="warning alert" id ="headerIE"></div>
       <div class="top parallax parallaxTop"  gumby-parallax=".53">
          <section id="mainTop">
             <nav gumby-fixed="250">
@@ -96,9 +97,8 @@
                </div>
             </nav>
             <div id="modal1">
-              <div class="alertNote">
+                 <i class="icon-cancel-circled" onclick="parentNode.remove()"></i>
                  <a href="http://blog.nem.io/the-newsletter/">NEM has launched!</a>
-              </div>
             </div>
 				<div class="row">
   					<section class="six columns centered">
@@ -243,12 +243,12 @@
             </div>
          </div>
       </div>
-      <!--
-      <div class="stats">
+
+      <!-- <div class="stats">
          <div class="row">
             <div class="statInfo mMargin">
                <div class="statNumbers">
-                  <div id="odometer5" class="odometer">178</div>
+                  <div id="odometer5" class="odometer"></div>
                </div>
                <div class="statWords" id="statsnis"></div>
             </div>
@@ -266,13 +266,13 @@
             </div>
             <div class="statInfo">
                <div class="statNumbers">
-                  <div id="odometer2" class="odometer">1223</div>
+                  <div id="odometer2" class="odometer"></div>
                </div>
-               <div class="statWords" id="statsavg"></div>
+               <div class="statWords" id="statsVer"></div>
             </div>
          </div>
-      </div>
-   -->
+      </div> -->
+
       <div class="parallax parallax2" gumby-parallax=".7">
          <div class="overflowHide">
             <div class="heading3" data-target="purchaseNem">
@@ -461,6 +461,10 @@
          </section>
          </div>
       </div>
+      <!-- <button>Send an HTTP POST request to a page and get the result back</button>
+<div id="summary">
+
+</div> -->
       <div id="footer">
          <footer class="row footLinks" gumby-shuffle="only screen and (max-width: 767px)|1-0">
             <div class=" four columns inview" gumby-classname="onscreen" gumby-offset="150" >
@@ -541,6 +545,9 @@
          }
          }
       </script>
+
+
+
       <!--
          Google's recommended deferred loading of JS
          gumby.min.js contains gumby.js, all UI modules and gumby.init.js
@@ -567,6 +574,41 @@
       <script src="js/_custom.js"></script>
       <script src="bower_components/gumby/js/plugins.js"></script>
       <script src="bower_components/gumby/js/main.js"></script>
+      <script>
+         // function code(data) {
+         // console.log(data);
+         //     alert(data.type);
+         //     document.getElementById("odometer5").innerHTML=+data.type;
+         //  }
+          function callback(data) {
+          console.log(data);
+            //  alert(data.stable);
+      document.getElementById("odometer2").innerHTML=data.stable;
+   }
+</script>
+<!-- // <script>
+// $(document).ready(function () {
+//    $("button").click(function () {
+//       $.getJSON('http://107.161.182.102:7890/status',
+//       function (data) {
+//          alert(JSON.stringify(data));
+//       });
+//    });
+// });
+// </script> -->
+<!-- // <script>
+// $.ajax({
+//   url: 'http://www.nodeexplorer.com/api_openapi_version?=callback?',
+//   dataType: 'jsonp',
+//   success: function(data){
+//      console.log(data);
+//   }
+// });
+// </script> -->
+<!-- get client version number from bob.nem.ninja -->
+<script src="http://bob.nem.ninja/version_p.js"></script>
+      <!-- // <script src="http://107.161.182.102:7890/status"></script> -->
+
       <!-- Change UA-XXXXX-X to be your site's ID -->
       <!--<script>
          window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];

@@ -1694,6 +1694,10 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 
 .row { padding-left: 0px; padding-right: 0px; }
 
+.warning.alert { text-align: center; margin-bottom: 0px; }
+.warning.alert i { padding-left: 100px; }
+@media only screen and (max-width: 960px) { .warning.alert i { padding-left: 10px; } }
+
 .parallax1 { background: url(../img/about-bg.jpg) no-repeat; background-size: cover; margin-top: 0px; padding-top: 0px; }
 
 .parallax2 { background: url(../img/geometry.png) repeat; }
@@ -1747,7 +1751,7 @@ nav.fixed a > span:before { margin-bottom: -2px; }
 
 i.icon-down-open-big { margin: 0; }
 
-#modal1 { position: absolute; right: 0; padding: 10px 30px; margin: 25px; -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; background-color: rgba(65, 191, 118, 0.6); }
+#modal1 { position: absolute; right: 0; padding: 10px 30px; margin: 25px; padding-left: 10px; -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; background-color: rgba(65, 191, 118, 0.6); color: white; }
 
 #modal1 a { color: white; }
 

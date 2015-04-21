@@ -69,6 +69,12 @@
       "about2": "Install the NEM Mobile Client, it has all the core NEM features, with ease of use in mind.",
       "click2": "COMING SOON"
    },
+   "stats":{
+      "nis": "Nodes Online",
+      "acc": "accounts in use",
+      "dorm": "accounts that are dormant",
+      "ver": "Current NEM Version"
+   },
    "buy":{
       "header": "How to get XEM?",
       "box1": "XEM is available at BITTREX, get your XEM now.",
