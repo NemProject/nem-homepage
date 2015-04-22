@@ -37,9 +37,9 @@ $.i18n.init({
 		$('#statsVer').text($.t('stats.ver'));
 
 		$('#buyheader').text($.t('buy.header'));
-		$('#buybox1').text($.t('buy.box1'));
+		$('#buybox1').text($.t('buy.box4'));
 		$('#buybox1click').text($.t('buy.box1click'));
-		$('#buybox2').text($.t('buy.box2'));
+		$('#buybox2').text($.t('buy.box5'));
 		$('#buybox2click').text($.t('buy.box2click'));
 		$('#buybox3').text($.t('buy.box3'));
 		$('#buybox3click').text($.t('buy.box3click'));

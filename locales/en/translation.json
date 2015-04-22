@@ -77,9 +77,9 @@
    },
    "buy":{
       "header": "How to get XEM?",
-      "box1": "XEM is available at BITTREX, get your XEM now.",
-      "box1click": "$t(app.now)",
-      "box2": "XEM is available at POLONIEX, the first exchange to list XEM",
+      "box4": "Spend XEM Anywhere that you can spend Bitcoin",
+      "box1click": "$t(app.coming)",
+      "box5": "Buy XEM at one of these exchanges",
       "box2click": "$t(app.now)",
       "box3": "Buy XEM directly with cash",
       "box3click": "$t(app.coming)",

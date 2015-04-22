@@ -361,6 +361,21 @@ z-index: 160;
    z-index: 1;
    min-height: 62px;
 }
+.purchase .eleven.columns.centered{
+   margin-top: 10px;
+   margin-bottom: 7px;
+   font-weight: 300;
+   a{
+      color: $gray;
+      @include transition(all .6s);
+      @include transition-timing-function(ease-out);
+   }
+   a:hover{
+      color: $greenLite;
+      @include transition(all .6s);
+      @include transition-timing-function(ease-out);
+   }
+}
 .purchase .ten.columns.centered{
    margin-top: 20px;
    font-weight: 300;
@@ -382,6 +397,11 @@ z-index: 160;
 .bitcoin{
    width: 65px;
    padding-top: 15px;
+   padding-bottom: 15px;
+}
+.cart{
+   width: 70px;
+   padding-top: 10px;
    padding-bottom: 15px;
 }
 .nemIcon{

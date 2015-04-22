@@ -1810,6 +1810,10 @@ i.icon-down-open-big { margin: 0; }
 
 .test2 { position: relative; z-index: 1; min-height: 62px; }
 
+.purchase .eleven.columns.centered { margin-top: 10px; margin-bottom: 7px; font-weight: 300; }
+.purchase .eleven.columns.centered a { color: #555555; -webkit-transition: all 0.6s; -moz-transition: all 0.6s; -o-transition: all 0.6s; transition: all 0.6s; -webkit-transition-timing-function: ease-out; -moz-transition-timing-function: ease-out; -o-transition-timing-function: ease-out; transition-timing-function: ease-out; }
+.purchase .eleven.columns.centered a:hover { color: rgba(65, 191, 118, 0.6); }
+
 .purchase .ten.columns.centered { margin-top: 20px; font-weight: 300; }
 
 .purchase { text-align: center !important; }
@@ -1821,6 +1825,8 @@ i.icon-down-open-big { margin: 0; }
 .money { padding-top: 7px; width: 90px; }
 
 .bitcoin { width: 65px; padding-top: 15px; padding-bottom: 15px; }
+
+.cart { width: 70px; padding-top: 10px; padding-bottom: 15px; }
 
 .nemIcon { width: 65px; padding-top: 13px; }
 
