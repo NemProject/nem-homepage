@@ -76,9 +76,9 @@
       "ver": "Current NEM Version"
    },
    "buy":{
-      "header": "How to get XEM?",
+      "header": "Buy or use XEM",
       "box4": "Spend XEM Anywhere that you can spend Bitcoin",
-      "box1click": "$t(app.coming)",
+      "gateway": "COINGATEWAY",
       "box5": "Buy XEM at one of these exchanges",
       "box2click": "$t(app.now)",
       "box3": "Buy XEM directly with cash",

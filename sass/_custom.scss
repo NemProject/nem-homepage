@@ -376,6 +376,10 @@ z-index: 160;
       @include transition-timing-function(ease-out);
    }
 }
+.buyColumns{
+@include fancytiles(2,2,2);
+text-align: center;
+}
 .purchase .ten.columns.centered{
    margin-top: 20px;
    font-weight: 300;

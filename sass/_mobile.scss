@@ -234,6 +234,11 @@
       margin-right: 20px;
    }
 }
+.purchase .eleven.columns ul{
+   @include respond("max-width: 767px") {
+      text-align: center !important;
+   }
+}
 .purchase .three_up, .purchase .ten.columns p{
    @include respond("max-width: 767px") {
       text-align: center !important;
