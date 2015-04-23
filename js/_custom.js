@@ -1,6 +1,5 @@
 
 $.i18n.init({
-		lng: 'en',
 		ns: { namespaces: ['translation'], defaultNs: 'translation'},
 		useLocalStorage: false,
 		fallbackLng: 'en',
