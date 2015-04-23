@@ -77,7 +77,7 @@
    },
    "buy":{
       "header": "Buy or use XEM",
-      "box4": "Spend XEM Anywhere that you can spend Bitcoin",
+      "box4": "Spend XEM anywhere that you can spend Bitcoin",
       "gateway": "COINGATEWAY",
       "box5": "Buy XEM at one of these exchanges",
       "box2click": "$t(app.now)",

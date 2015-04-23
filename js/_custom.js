@@ -1,10 +1,11 @@
 
 $.i18n.init({
-		ns: { namespaces: ['en', 'translation'], defaultNs: 'translation'},
+		lng: 'en',
+		ns: { namespaces: ['translation'], defaultNs: 'translation'},
 		useLocalStorage: false,
 		fallbackLng: 'en',
 		// sendMissing: true,
-		debug: true
+		debug: false
 	}, function(t) {
 		$('#add').text($.t('ns.common:add'));
 		$('#appname').text($.t('app.name'));
