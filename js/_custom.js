@@ -273,8 +273,9 @@ $.i18n.init({
 	//**## NEM NEWS FEED ##**/
 	//Pulls twitter feed using twitter fetcher.
 	// Also automatically hyperlinks URLS and user mentions and hashtags.
+	//@nemcoin
 	var config1 = {
-		"id": '474290838172749825',//@nemcoin
+		"id": '474290838172749825',
 		"domId": 'newsFeed',
 		"maxTweets": 3,
 		"enableLinks": true,
@@ -284,7 +285,6 @@ $.i18n.init({
 		"dateFunction": '',
 		"showRetweet": false,
 		"showInteraction": false
-
 	};
 	twitterFetcher.fetch(config1);
 
