@@ -56,7 +56,7 @@
       "helpdesk": "HELP DESK",
       "faq": "FAQ's",
       "update": "UPDATES",
-      "lang": "<span>ENGLISH $t(a.i)</span>",
+      "lang": "<span><img src=\"img/flags/United-States-of-America(USA).png\" alt=\"English\"/>$t(a.i)</span>",
       "READ-Translators4": "lang output should be the name of the translated language"
    },
    "clients":{

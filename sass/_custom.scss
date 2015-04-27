@@ -140,6 +140,10 @@ nav{
    .nine.columns{
       margin-top: 2.5%;
       text-align: inherit;
+      li span img{
+         position: relative;
+         top: 5px;
+      }
       .dropdown{
          margin-top: -10px;
          margin-left: 0px;
@@ -178,17 +182,22 @@ nav.fixed{
    height: 65px;
    .three.columns.logo{
       margin-top: -5px;
+      img{
+         width: 100px;
+      }
    }
    .nine.columns{
       margin-top: 5px;
+      li span img{
+         position: relative;
+         top: 5px;
+      }
       .dropdown{
          margin-top: -10px;
          margin-left: 0px;
       }
    }
-   img{
-      width: 100px;
-   }
+
    a > span:before {
       margin-bottom: -2px;
    }
