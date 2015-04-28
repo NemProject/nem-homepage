@@ -1722,11 +1722,13 @@ a > span:hover:before { visibility: visible; -webkit-transform: scaleX(1); trans
 
 .navbar ul li > a { padding-right: 0px; padding-left: 0px; margin-right: 0px; margin-left: 0px; text-shadow: none; color: #444444; font-family: "Roboto", Arial, sans-serif; font-size: 14px; }
 
-.navbar ul li > a:hover { background-color: transparent; }
+.navbar ul li > a:hover { background: transparent; }
 
 .gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a, .navbar, .skiplink { background: transparent; }
 
-.gumby-no-touch .navbar ul li:hover .dropdown { border-top: none; }
+.gumby-no-touch .navbar ul li:hover .dropdown { border-top: none; background: rgba(255, 255, 255, 0.95); }
+
+.gumby-no-touch .navbar ul li:hover .flags { padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px; width: 60px; margin-left: 23px; }
 
 .gumby-no-touch .navbar li .dropdown ul li a:hover { background: transparent !important; }
 

@@ -17,6 +17,7 @@ $darkerGray: #2f2f2f;
 $darkGray: #444;
 $gray: #555;
 $fontGray: #a4a4a4;
+$grayTransparent: rgba(255,255,255,0.95);
 $primaryFont: 'Roboto', Arial, sans-serif;
 
 $terminalFont: monospace;
@@ -115,16 +116,29 @@ a:before:hover{
    font-size: 14px;
 }
 .navbar ul li > a:hover{
-   background-color: transparent;
+   background: transparent;
 }
 .gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a, .navbar, .skiplink{
    background: transparent;
 }
 .gumby-no-touch .navbar ul li:hover .dropdown{
    border-top: none;
+   background: $grayTransparent;
 }
-.gumby-no-touch .navbar .dropdown ul:hover{
+.gumby-no-touch .navbar ul li:hover .flags{
+   padding-top: 0px;
+   padding-bottom: 0px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   width: 60px;
+   margin-left: 23px;
 }
+// .gumby-no-touch .navbar ul li:hover .flags ul li{
+//       padding-top: 0px !important;
+//       padding-bottom: 0px !important;
+//       margin-top: 0px !important;
+//       margin-bottom: 0px !important;
+// }
 .gumby-no-touch .navbar li .dropdown ul li a:hover{
    background: transparent !important;
 }
@@ -158,6 +172,7 @@ nav{
                margin-bottom: 0px;
             }
          }
+
       li{
          min-width: 60px;
          text-align: center;

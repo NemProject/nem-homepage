@@ -55,7 +55,7 @@
       "helpdesk": "HELP DESK",
       "faq": "UKK",
       "update": "PÄIVITYKSET",
-      "lang": "<span>SUOMI $t(a.i)</span>",
+      "lang": "<span><img src=\"img/flags/Finland.png\" alt=\"suomi\"/> $t(a.i)</span>",
       "READ-Translators4": "lang output should be the name of the translated language"
    },
    "clients":{

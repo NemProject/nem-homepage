@@ -55,7 +55,7 @@
       "helpdesk": "HELP DESK",
       "faq": "常见问题与解答",
       "update": "更新",
-      "lang": "<span>中文（简体） $t(a.i)</span>",
+      "lang": "<span><img src=\"img/flags/China.png\" alt=\"中文\"/> $t(a.i)</span>",
       "READ-Translators4": "lang output should be the name of the translated language"
    },
    "clients":{
