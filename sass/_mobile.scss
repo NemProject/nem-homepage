@@ -133,6 +133,9 @@
    @media only screen and (min-height: 1000px) {
       height: 80%;
    }
+   @media only screen and (min-height: 1200px) {
+      height: 70%;
+   }
 }
 .thirdParty{
    @include respond("max-width: 767px") {
