@@ -20,5 +20,5 @@ print(nodeCounter)
 response3 = urlopen(urlPOLO)
 jsonPrice = load(response3)
 priceXEM = float(jsonPrice['BTC_XEM']['last'])
-priceXEM *= 100000000
+priceXEM *= 100000000 #100,000,000
 print ("%.0f" % priceXEM)
