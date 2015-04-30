@@ -1807,7 +1807,7 @@ i.icon-down-open-big { margin: 0; }
 
 .statInfo { display: inline-block; float: left; padding-left: 0.96154%; padding-right: 0.96154%; width: 50%; }
 @media only screen and (min-width: 0px) { .statInfo { width: 50%; } }
-@media only screen and (min-width: 768px) { .statInfo { width: 50%; } }
+@media only screen and (min-width: 768px) { .statInfo { width: 25%; } }
 @media only screen and (min-width: 1040px) { .statInfo { width: 25%; } }
 
 .clientNem { padding-top: 70px; padding-bottom: 70px; }
@@ -2142,8 +2142,8 @@ a.anchor { display: block; position: relative; top: -200px; visibility: hidden; 
 
 @media only screen and (max-width: 767px) { .thirdParty { position: relative; right: 0%; opacity: 1; } }
 
-@media only screen and (tablet) { .mMargin { margin-top: 30px; margin-bottom: 70px; } }
-@media only screen and (max-width: 767px) { .mMargin { margin-top: 30px; margin-bottom: 70px; } }
+@media only screen and (tablet) { .statsMargin { margin-top: 30px; margin-bottom: 70px; } }
+@media only screen and (max-width: 767px) { .statsMargin { margin-top: 30px; margin-bottom: 70px; } }
 
 @media only screen and (max-width: 767px) { .joined { min-height: 200px; padding-top: 30px; } }
 

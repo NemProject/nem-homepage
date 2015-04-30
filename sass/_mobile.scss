@@ -216,7 +216,7 @@
       opacity: 1;
    }
 }
-.mMargin{
+.statsMargin{
    @include respond(tablet) {
       margin-top: 30px;
       margin-bottom: 70px;

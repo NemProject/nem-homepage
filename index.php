@@ -64,7 +64,7 @@
                   <!-- Toggle for mobile navigation, targeting the <ul> -->
                   <a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
                   <h1 class="three columns logo">
-                     <a href="index.html">
+                     <a href="index.php">
                      <img src="img/nemLogoLarge.png" alt="New Economy Movement" gumby-retina />
                      </a>
                   </h1>
@@ -163,13 +163,13 @@
       ?>
       <div class="stats" id ="stats">
          <div class="row">
-            <div class="statInfo mMargin">
+            <div class="statInfo statsMargin">
                <div class="statNumbers">
-                  <div id="odometer5" class="odometer"><?PHP echo $output[4]; ?></div>
+                  <div id="odometer5" class="odometer"><?PHP echo $output[0]; ?></div>
                </div>
                <div class="statWords" id="statsheight"></div>
             </div>
-            <div class="statInfo mMargin">
+            <div class="statInfo statsMargin">
                <div class="statNumbers">
                   <div id="odometer3" class="odometer"><?PHP echo $output[1]; ?></div>
                </div>
@@ -314,14 +314,13 @@
             </div>
             <div class="row purchase">
                <div class="twelve columns buyGuide inview" gumby-classname="onscreen" gumby-offset="50">
-                  <h5 class="needHelp" id="link2Html" data-i18n="[html]buy.help;"></h5>
-                  <h5 class="needHelp" id="link2Html2" data-i18n="[html]buy.help2;"></h5>
+                  <!-- <h5 class="needHelp" id="link2Html" data-i18n="[html]buy.help;"></h5>
+                  <h5 class="needHelp" id="link2Html2" data-i18n="[html]buy.help2;"></h5> -->
                   <h5 class="needHelp" id="btc8Chat" data-i18n="[html]buy.8btc;"></h5>
                </div>
             </div>
 
             <div id="innerHtml" data-i18n="[html]html.content;"></div>
-
          </div>
       </div>
 <!--
