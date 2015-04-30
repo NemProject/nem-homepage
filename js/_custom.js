@@ -31,9 +31,9 @@ $.i18n.init({
 		$('#clientsabout2').text($.t('clients.about2'));
 		$('#clientsclick2').text($.t('clients.click2'));
 
+		$('#statsheight').text($.t('stats.height'));
 		$('#statsnis').text($.t('stats.nis'));
-		$('#statsacc').text($.t('stats.acc'));
-		$('#statsdorm').text($.t('stats.dorm'));
+		$('#statsprice').text($.t('stats.price'));
 		$('#statsVer').text($.t('stats.ver'));
 
 		$('#buyheader').text($.t('buy.header'));

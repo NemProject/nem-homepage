@@ -65,7 +65,7 @@
                   <a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
                   <h1 class="three columns logo">
                      <a href="index.html">
-                     <img src="img/nemLogoLarge.png" alt="NEM Logo" gumby-retina />
+                     <img src="img/nemLogoLarge.png" alt="New Economy Movement" gumby-retina />
                      </a>
                   </h1>
                   <ul class="nine columns">
@@ -125,6 +125,7 @@
       </div>
 
       <div class="parallax parallax1" id="mainClient" gumby-parallax=".5">
+
          <div class="row mainClientWrap">
             <div class="push_six six columns test2 mainClient" id="mainClient" data-target="nemClient">
                <span class="modContent">
@@ -155,26 +156,30 @@
             </div>
          </div>
       </div>
-
-      <!-- <div class="stats">
+      <?PHP
+      $output = [];
+      exec("python stats.py", $output);
+      // the $output array contains printed python lines
+      ?>
+      <div class="stats" id ="stats">
          <div class="row">
             <div class="statInfo mMargin">
                <div class="statNumbers">
-                  <div id="odometer5" class="odometer"></div>
+                  <div id="odometer5" class="odometer"><?PHP echo $output[4]; ?></div>
                </div>
-               <div class="statWords" id="statsnis"></div>
+               <div class="statWords" id="statsheight"></div>
             </div>
             <div class="statInfo mMargin">
                <div class="statNumbers">
-                  <div id="odometer3" class="odometer">123</div>
+                  <div id="odometer3" class="odometer"><?PHP echo $output[1]; ?></div>
                </div>
-               <div class="statWords" id="statsacc"></div>
+               <div class="statWords" id="statsnis"></div>
             </div>
             <div class="statInfo">
                <div class="statNumbers">
-                  <div id="odometer4" class="odometer">45</div>
+                  <div id="odometer4" class="odometer"><?PHP echo $output[2]; ?></div>
                </div>
-               <div class="statWords" id="statsdorm"></div>
+               <div class="statWords" id="statsprice"></div>
             </div>
             <div class="statInfo">
                <div class="statNumbers">
@@ -183,7 +188,7 @@
                <div class="statWords" id="statsVer"></div>
             </div>
          </div>
-      </div> -->
+      </div>
 
       <div class="parallax parallax2" gumby-parallax=".7">
          <div class="overflowHide">
@@ -464,6 +469,7 @@
             </div>
          </div>
       </div>
+
       <!-- Grab Google CDN's jQuery, fall back to local if offline -->
       <!-- 2.0 for modern browsers, 1.10 for .oldie -->
       <script>
@@ -512,39 +518,28 @@
       <script src="js/_custom.js"></script>
       <script src="bower_components/gumby/js/plugins.js"></script>
       <script src="bower_components/gumby/js/main.js"></script>
-      <script>
+      <script type="text/javascript">
+         onload=function(){
+         var mydiv=document.getElementById('stats');
+         var mydiv2=document.getElementById('odometer5');
+         if(!mydiv2.hasChildNodes()){mydiv.style.display='none'}
+         }
+</script>
+<script>
          // function code(data) {
          // console.log(data);
          //     alert(data.type);
          //     document.getElementById("odometer5").innerHTML=+data.type;
          //  }
-   //        function callback(data) {
-   //        console.log(data);
-   //          //  alert(data.stable);
-   //    document.getElementById("odometer2").innerHTML=data.stable;
-   // }
+          function callback(data) {
+          console.log(data);
+            //  alert(data.stable);
+      document.getElementById("odometer2").innerHTML=data.stable;
+   }
+
 </script>
-<!-- // <script>
-// $(document).ready(function () {
-//    $("button").click(function () {
-//       $.getJSON('http://107.161.182.102:7890/status',
-//       function (data) {
-//          alert(JSON.stringify(data));
-//       });
-//    });
-// });
-// </script> -->
-<!-- // <script>
-// $.ajax({
-//   url: 'http://www.nodeexplorer.com/api_openapi_version?=callback?',
-//   dataType: 'jsonp',
-//   success: function(data){
-//      console.log(data);
-//   }
-// });
-// </script> -->
 <!-- get client version number from bob.nem.ninja -->
-<!-- <script src="http://bob.nem.ninja/version_p.js"></script> -->
+<script src="http://bob.nem.ninja/version_p.js"></script>
       <!-- // <script src="http://107.161.182.102:7890/status"></script> -->
 
       <!-- Change UA-XXXXX-X to be your site's ID -->

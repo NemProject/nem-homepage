@@ -71,9 +71,9 @@
    },
    "stats":{
       "nis": "Nodes Online",
-      "acc": "accounts in use",
-      "dorm": "accounts that are dormant",
-      "ver": "Current NEM Version"
+      "height": "Blockchain Height",
+      "price": "Price (in Satoshis)",
+      "ver": "latest NEM Version"
    },
    "buy":{
       "header": "Buy or use XEM",
