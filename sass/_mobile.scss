@@ -226,7 +226,6 @@
       margin-bottom: 70px;
    }
 }
-
 .joined{
    @include respond("max-width: 767px") {
       min-height: 200px;

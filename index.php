@@ -104,7 +104,7 @@
   					<section class="six columns centered">
     					<div class="headline">
                      <article class="youtube video">
-                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/3ClzvI5EFss?rel=0&amp;controls=1&amp;showinfo=0&amp;VQ=HD720" frameborder="0" allowfullscreen>
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/tVgEO-68-rU?rel=0&amp;controls=1&amp;showinfo=0&amp;VQ=HD720" frameborder="0" allowfullscreen>
                         </iframe>
                      </article
                  </div>
@@ -156,7 +156,7 @@
             </div>
          </div>
       </div>
-      <?PHP
+      <!-- <?PHP
       $output = [];
       exec("python stats.py", $output);
       // the $output array contains printed python lines
@@ -188,7 +188,7 @@
                <div class="statWords" id="statsVer"></div>
             </div>
          </div>
-      </div>
+      </div> -->
 
       <div class="parallax parallax2" gumby-parallax=".7">
          <div class="overflowHide">
@@ -530,11 +530,11 @@
          //     alert(data.type);
          //     document.getElementById("odometer5").innerHTML=+data.type;
          //  }
-          function callback(data) {
-          console.log(data);
-            //  alert(data.stable);
-      document.getElementById("odometer2").innerHTML=data.stable;
-   }
+   //        function callback(data) {
+   //        console.log(data);
+   //          //  alert(data.stable);
+   //    document.getElementById("odometer2").innerHTML=data.stable;
+   // }
 
 </script>
 <!-- get client version number from bob.nem.ninja -->
