@@ -17,6 +17,9 @@ define("port", default=1337, help="run on the given port", type=int)
 
 class StatsHandler(tornado.web.RequestHandler):
 	def get(self):
+
+		output = []
+
 		urlNEMBEX = 'http://nembex.nem.ninja/api/stats/nodes'
 		urlNEMBEX2 = 'http://nembex.nem.ninja/api/last-block'
 		urlPOLO = 'https://poloniex.com/public?command=returnTicker'
@@ -39,7 +42,9 @@ class StatsHandler(tornado.web.RequestHandler):
 		priceXEM *= 100000000 #100,000,000
 		print ("%.0f" % priceXEM)
 
-		self.write(ujson.dumps())
+		output.append(nodeCounter, priceXEM)
+
+		self.write(ujson.dumps(output))
 		self.finish()
 
 if __name__ == '__main__': 
