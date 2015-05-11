@@ -148,13 +148,13 @@ nav{
    padding: inherit !important;
    background-color: $white;
    text-transform: uppercase;
-   .three.columns.logo{
-      margin-top: 1.7%;
+   .three.columns.logo{ //nem logo
+      margin-top: 25px;
    }
    .nine.columns{
       margin-top: 2.5%;
       text-align: inherit;
-      li span img{
+      li span img{ //flags
          position: relative;
          top: 5px;
       }
@@ -752,6 +752,9 @@ vertical-align: bottom;
    position: relative;
    opacity: 1;
    @include transition(all .2s);
+   img{
+      width: 200px;
+   }
 }
 .four.columns.onscreen {
    right: 0%;
@@ -759,6 +762,9 @@ vertical-align: bottom;
    @include transition(all .6s);
    @include transition-timing-function(ease-out);
    @include transition-delay(0s);
+   img{
+      width: 180px;
+   }
 }
    p{
       font-size: 14px;

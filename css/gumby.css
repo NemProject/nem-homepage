@@ -1733,7 +1733,7 @@ a > span:hover:before { visibility: visible; -webkit-transform: scaleX(1); trans
 .gumby-no-touch .navbar li .dropdown ul li a:hover { background: transparent !important; }
 
 nav { width: 100%; height: 20%; padding: inherit !important; background-color: white; text-transform: uppercase; }
-nav .three.columns.logo { margin-top: 1.7%; }
+nav .three.columns.logo { margin-top: 25px; }
 nav .nine.columns { margin-top: 2.5%; text-align: inherit; }
 nav .nine.columns li span img { position: relative; top: 5px; }
 nav .nine.columns .dropdown { margin-top: -10px; margin-left: 0px; border-top: none; max-width: 140px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
@@ -1934,7 +1934,9 @@ i.icon-down-open-big { margin: 0; }
 
 .footLinks { margin-bottom: 50px; }
 .footLinks .four.columns { right: -15%; position: relative; opacity: 1; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
+.footLinks .four.columns img { width: 200px; }
 .footLinks .four.columns.onscreen { right: 0%; opacity: 1; -webkit-transition: all 0.6s; -moz-transition: all 0.6s; -o-transition: all 0.6s; transition: all 0.6s; -webkit-transition-timing-function: ease-out; -moz-transition-timing-function: ease-out; -o-transition-timing-function: ease-out; transition-timing-function: ease-out; -webkit-transition-delay: 0s; -moz-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; }
+.footLinks .four.columns.onscreen img { width: 180px; }
 .footLinks p { font-size: 14px; }
 .footLinks ul li { line-height: 1.2em; font-size: 83%; font-weight: 500; }
 .footLinks ul li:first-child { font-weight: 700; font-size: 110%; margin-bottom: 0px !important; line-height: 2.9em; }
@@ -2095,7 +2097,11 @@ a.anchor { display: block; position: relative; top: -200px; visibility: hidden; 
 
 @media only screen and (max-width: 767px) { .navbar h1 { margin-left: 12px !important; margin-bottom: 5px !important; } }
 
+@media only screen and (max-width: 767px) { .navbar .logo { margin-left: 12px !important; margin-top: 10px !important; } }
+
 @media only screen and (max-width: 767px) { .navbar ul { background: white; padding-right: 4%; } }
+
+@media only screen and (max-width: 767px) { .navbar { margin-bottom: 0px !important; } }
 
 @media only screen and (max-height: 868px) { .headline { max-width: 500px !important; margin: 0 auto !important; margin-top: 80px !important; } }
 @media only screen and (max-height: 767px) { .headline { max-width: 450px !important; } }

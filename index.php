@@ -65,7 +65,7 @@
                   <a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
                   <h1 class="three columns logo">
                      <a href="index.php">
-                     <img src="img/nemLogoLarge.png" alt="New Economy Movement" gumby-retina />
+                        <img src="img/nemLogo.svg" onerror="this.src=img/nemLogoLarge.png" alt="New Economy Movement" gumby-retina />
                      </a>
                   </h1>
                   <ul class="nine columns">
@@ -410,7 +410,7 @@
       <div id="footer">
          <footer class="row footLinks" gumby-shuffle="only screen and (max-width: 767px)|1-0">
             <div class=" four columns inview" gumby-classname="onscreen" gumby-offset="150" >
-               <img src="img/nemLogoWhite.png" alt="NEM logo white"/>
+               <img src="img/nemLogoWhite.svg" onerror="this.src=img/nemLogoWhite.png" alt="NEM logo white" gumby-retina />
                <p id="footerlogotext"></p>
             </div>
             <div class="push_two six columns">

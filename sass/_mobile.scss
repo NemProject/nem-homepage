@@ -47,14 +47,24 @@
 .navbar h1 {
    @include respond("max-width: 767px") {
       margin-left: 12px !important;
-
       margin-bottom: 5px !important;
+   }
+}
+.navbar .logo {
+   @include respond("max-width: 767px") {
+      margin-left: 12px !important;
+      margin-top: 10px !important;
    }
 }
 .navbar ul {
    @include respond("max-width: 767px") {
       background: $white;
       padding-right: 4%;
+   }
+}
+.navbar{
+   @include respond("max-width: 767px") {
+      margin-bottom: 0px !important;
    }
 }
 .headline{
