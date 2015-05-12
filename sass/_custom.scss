@@ -413,6 +413,9 @@ text-align: center;
 .joined{
    min-height: 230px;
 }
+.joined2{
+   min-height: 200px;
+}
 .arrows{
    padding-top: 18px;
    width: 60px;
@@ -455,7 +458,7 @@ text-align: center;
    margin-top: 20px;
    background-color: $white;
    .inside {
-      @include fancytiles(5,5,2);
+      @include fancytiles(6,6,3);
    }
    .inside img{
       max-height: 16px;
@@ -495,6 +498,9 @@ text-align: center;
       margin-bottom: -2px;
       background-color: $green;
    }
+}
+#buybox2{
+   padding-top: -10px;
 }
 #buybox3{
    padding-top: 30px;

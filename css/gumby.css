@@ -1829,6 +1829,8 @@ i.icon-down-open-big { margin: 0; }
 
 .joined { min-height: 230px; }
 
+.joined2 { min-height: 200px; }
+
 .arrows { padding-top: 18px; width: 60px; }
 
 .money { padding-top: 7px; width: 90px; }
@@ -1842,10 +1844,10 @@ i.icon-down-open-big { margin: 0; }
 .button { margin: .4em; padding: .8em; cursor: pointer; background: transparent; text-decoration: none; border: 3px solid #444444; color: #555555; font-weight: 500; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 160px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
 
 .border.otherXchange { min-height: 30px; padding: 1% 0% .5% 0%; margin-top: 20px; background-color: white; }
-.border.otherXchange .inside { display: inline-block; float: left; padding-left: 0.96154%; padding-right: 0.96154%; width: 50%; }
-@media only screen and (min-width: 0px) { .border.otherXchange .inside { width: 50%; } }
-@media only screen and (min-width: 768px) { .border.otherXchange .inside { width: 20%; } }
-@media only screen and (min-width: 1040px) { .border.otherXchange .inside { width: 20%; } }
+.border.otherXchange .inside { display: inline-block; float: left; padding-left: 0.96154%; padding-right: 0.96154%; width: 33.33333%; }
+@media only screen and (min-width: 0px) { .border.otherXchange .inside { width: 33.33333%; } }
+@media only screen and (min-width: 768px) { .border.otherXchange .inside { width: 16.66667%; } }
+@media only screen and (min-width: 1040px) { .border.otherXchange .inside { width: 16.66667%; } }
 .border.otherXchange .inside img { max-height: 16px; }
 .border.otherXchange .inside2 img { max-height: 20px !important; }
 
@@ -1854,6 +1856,8 @@ i.icon-down-open-big { margin: 0; }
 .buyGuide span { color: #41bf76; font-size: 16px; font-weight: 500; }
 .buyGuide a > span:hover { color: #41bf76 !important; }
 .buyGuide a > span:before { margin-bottom: -2px; background-color: #41bf76; }
+
+#buybox2 { padding-top: -10px; }
 
 #buybox3 { padding-top: 30px; }
 

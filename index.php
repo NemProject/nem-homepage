@@ -198,7 +198,7 @@
             <div class="row purchase">
             <!-- BOX 1 STARTS -->
                <div class="four columns border">
-                  <div class="joined">
+                  <div class="joined2">
                      <ul class="three_up tiles">
                         <li>
                            <img class="nemIcon" src="img/64x64.png"/>
@@ -224,6 +224,9 @@
                               </li>
                               <li>
                                  <a href="http://btc38.com/trade.html?mk_type=btc&btc38_trade_coin_name=xem">BTC38</a>
+                              </li>
+                              <li>
+                                 <a href="https://vip.bitcoin.co.id/nembtc">BITCOIN.co.id</a>
                               </li>
                            </ul>
                         </div>
@@ -306,6 +309,9 @@
 </div>
 <div class="inside">
 <a href="http://btc38.com/trade.html?mk_type=btc&btc38_trade_coin_name=xem"><img height="16px" src="img/btc38Sat.png" alt="btc38 cryptocurrency exchange"/></a>
+</div>
+<div class="inside inside2">
+<a href="https://vip.bitcoin.co.id/nembtc"><img height="20px" src="img/bitcoincoid.png" alt="bitcoin cryptocurrency exchange"/></a>
 </div>
 <div class="inside inside2">
 <a href="https://bter.com/trade/XEM_BTC"><img src="img/bterSat.png" alt="bter cryptocurrency exchange"/></a>
