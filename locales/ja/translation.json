@@ -50,12 +50,12 @@
       "client": "クライアント",
       "buy": "XEMを購入",
       "blog": "ブログ",
-      "support": "<span>S$t(a.i)をサポート</span>",
+      "support": "<span>$t(a.i)サポート</span>",
       "tutorial": "チュートリアル",
       "helpdesk": "ヘルプデスク",
       "faq": "良くある質問",
       "update": "最新情報",
-      "lang": "<span><img src=\"img/flags/United-States-of-America(USA).png\" alt=\"English\"/>$t(a.i)</span>",
+      "lang": "<span><img src=\"img/flags/Japan.png\" alt=\"日本語\"/>$t(a.i)</span>",
       "READ-Translators4": "lang output should be the name of the translated language"
    },
    "clients":{
