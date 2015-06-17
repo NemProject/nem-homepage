@@ -1,5 +1,6 @@
 {
-   "READ-Translators": "Thanks for helping build NEM! Directly below are different links for this site, change the links only if you can find a better alternative in the language you are translating to, and you are familiar with basic HTML. Anything that starts with 'READ' is a message to the translators, and it does not need to be translated."
+   "READ-Translators": "Thanks for helping build NEM! Directly below are different links for this site, change the links only if you can find a better alternative in the language you are translating to, and you are familiar with basic HTML. Anything that starts with 'READ' is a message to the translators, and it does not need to be translated.",
+   
    "a": {
       "i": "<i class=\"icon-down-open-big\"></i>",
       "1": "<a href=\"http://blog.nem.io/windows-mac-installation-guide/\">",
