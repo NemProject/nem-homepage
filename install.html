@@ -145,7 +145,7 @@
                   OR
                </p>
                <p>
-                  Download them directly from our sister-site at <a href="http://download.nem.io/installer/">download.nem.io</a>
+                  Download them directly from our sister-site at <a href="http://bob.nem.ninja/installer/">bob.nem.ninja</a>
                </p>
             </div>
          </div>
@@ -278,33 +278,35 @@
 
       <!-- put version number in download links -->
       <script>
+
          function callback(data) {
             // console.log(data);
             // alert(data.testing);
-            document.getElementById("windowsInstall").innerHTML="<a href=\"http://download.nem.io/installer/nemwallet-"+data.stable+"-windows-installer.exe\"><img src=\"img/windows.png\"/><br><br>Windows Installer</a>";
-            document.getElementById("macInstall").innerHTML="<a href=\"http://download.nem.io/installer/nemwallet-"+data.stable+"-osx-installer.app.tgz\"><img src=\"img/mac.png\"/><br><br>Mac Installer</a>";
-            document.getElementById("tgzClient").innerHTML="<a href=\"http://download.nem.io/nis-ncc-"+data.stable+".tgz\">NIS/NCC Standalone (.tgz)</a>";
-            document.getElementById("tgzSig").innerHTML="<a href=\"http://download.nem.io/nis-ncc-"+data.stable+".tgz.sig\">NIS/NCC Signature (.tgz)</a>";
-            document.getElementById("zipClient").innerHTML="<a href=\"http://download.nem.io/nis-ncc-"+data.stable+".zip\">NIS/NCC Standalone (.zip)</a>";
-            document.getElementById("zipSig").innerHTML="<a href=\"http://download.nem.io/nis-ncc-"+data.stable+".zip.sig\">NIS/NCC Signature (.zip)</a>";
+            link = "<a href=\"http://download.nem.io/";
+            document.getElementById("windowsInstall").innerHTML=link+"installer/nemwallet-"+data.stable+"-windows-installer.exe\"><img src=\"img/windows.png\"/><br><br>Windows Installer</a>";
+            document.getElementById("macInstall").innerHTML=link+"installer/nemwallet-"+data.stable+"-osx-installer.app.tgz\"><img src=\"img/mac.png\"/><br><br>Mac Installer</a>";
+            document.getElementById("tgzClient").innerHTML=link+"nis-ncc-"+data.stable+".tgz\">NIS/NCC Standalone (.tgz)</a>";
+            document.getElementById("tgzSig").innerHTML=link+"nis-ncc-"+data.stable+".tgz.sig\">NIS/NCC Signature (.tgz)</a>";
+            document.getElementById("zipClient").innerHTML=link+"nis-ncc-"+data.stable+".zip\">NIS/NCC Standalone (.zip)</a>";
+            document.getElementById("zipSig").innerHTML=link+"nis-ncc-"+data.stable+".zip.sig\">NIS/NCC Signature (.zip)</a>";
           }
       </script>
       <!-- get client version number from download.nem.io -->
       <script src="http://download.nem.io/version_p.js"></script>
 
- <script>
-//   function wfs() {
-//  var url = 'http://routes.cloudmade.com/8ee2a50541944fb9bcedded5165f09d9/api/0.3/51.22545,4.40730,%5B51.22,4.41,51.2,4.41%5D,51.23,4.42/car.js?lang=de&units=miles&callback=getRoute';
-//  var script = document.createElement('script');
-//  script.type="text/javascript";
-//  script.src=url;
-//  document.getElementsByTagName('head')[0].appendChild(script);
-// }
-//
-// function getRoute(response) {
-//  alert(response);
-// }
-//   </script>
+      <script>
+         //   function wfs() {
+         //  var url = 'http://routes.cloudmade.com/8ee2a50541944fb9bcedded5165f09d9/api/0.3/51.22545,4.40730,%5B51.22,4.41,51.2,4.41%5D,51.23,4.42/car.js?lang=de&units=miles&callback=getRoute';
+         //  var script = document.createElement('script');
+         //  script.type="text/javascript";
+         //  script.src=url;
+         //  document.getElementsByTagName('head')[0].appendChild(script);
+         // }
+         //
+         // function getRoute(response) {
+         //  alert(response);
+         // }
+      </script>
       <!-- Change UA-XXXXX-X to be your site's ID -->
       <!--<script>
          window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
@@ -318,7 +320,5 @@
       <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
       <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
       <![endif]-->
-         <script>
-   </script>
    </body>
 </html>
