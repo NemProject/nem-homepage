@@ -52,7 +52,7 @@
       "blog": "BLOGI",
       "support": "<span>SUPPORT $t(a.i)</span>",
       "tutorial": "TUTORIALS",
-      "helpdesk": "HELP DESK",
+      "helpdesk": "FORUM",
       "faq": "UKK",
       "update": "PÄIVITYKSET",
       "lang": "<span><img src=\"img/flags/Finland.png\" alt=\"suomi\"/> $t(a.i)</span>",

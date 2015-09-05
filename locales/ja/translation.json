@@ -52,7 +52,7 @@
       "blog": "ブログ",
       "support": "<span>$t(a.i)サポート</span>",
       "tutorial": "チュートリアル",
-      "helpdesk": "ヘルプデスク",
+      "helpdesk": "FORUM",
       "faq": "良くある質問",
       "update": "最新情報",
       "lang": "<span><img src=\"img/flags/Japan.png\" alt=\"日本語\"/>$t(a.i)</span>",

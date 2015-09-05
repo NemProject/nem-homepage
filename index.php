@@ -77,7 +77,7 @@
                            <ul>
                               <li><a href="faq.html"><span id="navfaq"></span></a></li>
                               <li class=""><a href="http://blog.nem.io/nem-tutorial-list/"><span id="tutorial"></span></a></li>
-                              <li class=""><a href="http://support.ournem.com/"><span id="helpdesk"></span></a></li>
+                              <li class=""><a href="https://forum.nem.io/"><span id="helpdesk"></span></a></li>
                            </ul>
                            </div>
                      </li>

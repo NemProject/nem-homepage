@@ -53,7 +53,7 @@
       "blog": "BLOG",
       "support": "<span>SUPPORT $t(a.i)</span>",
       "tutorial": "TUTORIALS",
-      "helpdesk": "HELP DESK",
+      "helpdesk": "FORUM",
       "faq": "FAQ's",
       "update": "UPDATES",
       "lang": "<span><img src=\"img/flags/United-States-of-America(USA).png\" alt=\"English\"/>$t(a.i)</span>",

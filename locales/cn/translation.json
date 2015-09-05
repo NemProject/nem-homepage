@@ -52,7 +52,7 @@
       "blog": "BLOG",
       "support": "<span>SUPPORT $t(a.i)</span>",
       "tutorial": "TUTORIALS",
-      "helpdesk": "HELP DESK",
+      "helpdesk": "FORUM",
       "faq": "常见问题与解答",
       "update": "更新",
       "lang": "<span><img src=\"img/flags/China.png\" alt=\"中文\"/> $t(a.i)</span>",
