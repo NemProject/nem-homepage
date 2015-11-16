@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>NCC Documentation</title>
+	<meta name="author" content="Quantum_Mechanics" />
+        <meta name="description" content="NEM NCC API Documentation" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+</head>
+
+<body data-spy="scroll" data-target=".scrollspy">
+
+	<div class="jumbotron text-center" id="Overview">
+    <div class="container">
+      <h1 style="font-family: 'Roboto',Arial,sans-serif;color:#444"><b>NEM Primer and NCC API Documentation</b></h1>
+    </div>
+  </div><!--end of .jumbotron-->
+
+  <div class="container">
+    <div class="row">
+
+			<!--------SIDEBAR----------->
+
+      <div class="col-md-3 scrollspy">
+        <ul id="nav" class="nav hidden-xs hidden-sm" data-spy="affix">
+	<li><img src="images/image004.jpg" width="249px"></img></li>
+		  <li><a href="#Background">Background</a>
+		  <ul class="nav">
+		   <li><a href="#Utility of the NEM Platform"><span class="fa fa-angle-double-right"></span>Utility of the NEM Platform</a></li>
+		   <li><a href="#Architecture"><span class="fa fa-angle-double-right"></span> Understanding the Architecture</a></li>
+		   <li><a href="#NCC"><span class="fa fa-angle-double-right"></span> NCC</a></li>
+		   <li><a href="#NIS"><span class="fa fa-angle-double-right"></span> NIS</a></li>
+		  </ul>
+		 </li>
+		 <li><a href="#Examples">Use Case Examples</a>
+		 <ul class="nav">
+	      <li><a href="#Time-Stamping"><span class="fa fa-angle-double-right"></span>Time Stamping</a></li>
+              <li><a href="#Messaging"><span class="fa fa-angle-double-right"></span>Messaging</a></li>
+              <li><a href="#Multisig"><span class="fa fa-angle-double-right"></span>Multisig</a></li>
+              <li><a href="#NEM-ID"><span class="fa fa-angle-double-right"></span>NEM Key ID</a></li>
+			  <li><a href="#Auto-Token-Distribution"><span class="fa fa-angle-double-right"></span>Auto Token Distribution</a></li>
+            </ul>
+          </li>
+		  
+		  
+		  <li><a href="#Mosaic"> Mosaics</a>
+		 <ul class="nav">
+	      <li><a href="#Namespace-and-Mosaic"><span class="fa fa-angle-double-right"></span>Significance of Namespace and Mosaic</a></li>
+              <li><a href="#Mosaic-Use-Cases"><span class="fa fa-angle-double-right"></span>Mosaic Use Cases</a></li>
+              <li><a href="#Mosaic-Extensibility"><span class="fa fa-angle-double-right"></span>Extensibility of Mosaics</a></li>
+              <li><a href="#Coinbase-Solution"><span class="fa fa-angle-double-right"></span>Coinbase/Bitpay type of solution</a></li>
+			  <li><a href="#Centralized-API"><span class="fa fa-angle-double-right"></span>A centralized API service solution</a></li>
+              <li><a href="#Trade-Settlement"><span class="fa fa-angle-double-right"></span>Trade Settlement and Pre-borrowed Assured Token solution</a></li>
+              <li><a href="#2-Factor-Authentication"><span class="fa fa-angle-double-right"></span>2 Factor Authentication Solution</a></li>
+			               </ul>
+          </li>
+		  <li><a href="#Conclusion">Conclusion</a>					
+		  <li><a href="#API-Overview">NCC API Overview</a>
+		  <li><a href="#NCC-information">Retrieving NCC information</a>
+            <ul class="nav">
+	      <li><a href="#NCC-status"><span class="fa fa-angle-double-right"></span>Get status of NCC server</a></li>
+              <li><a href="#NCC-infos"><span class="fa fa-angle-double-right"></span>Get information about the NCC server</a></li>
+              <li><a href="#NIS-infos"><span class="fa fa-angle-double-right"></span>Get information about the NIS server</a></li>
+              <li><a href="#NIS-availability"><span class="fa fa-angle-double-right"></span>Check availability of NIS server</a></li>
+            </ul>
+          </li>
+          <li><a href="#Configuration">Configuration</a>
+            <ul class="nav">
+	      <li><a href="#Current-config"><span class="fa fa-angle-double-right"></span>Get the current configuration</a></li>
+              <li><a href="#Update-config"><span class="fa fa-angle-double-right"></span>Update the current configuration with the given values</a></li>
+            </ul>
+          </li>
+          <li><a href="#Address-book">Address book</a>
+            <ul class="nav">
+	      <li><a href="#Create-address-book"><span class="fa fa-angle-double-right"></span>Create a new, empty address book</a></li>
+              <li><a href="#Open-address-book"><span class="fa fa-angle-double-right"></span>Open an address book</a></li>
+              <li><a href="#Address-book-info"><span class="fa fa-angle-double-right"></span>Return information about an address book that is already open</a></li>
+              <li><a href="#Close-address-book"><span class="fa fa-angle-double-right"></span>Close an address book</a></li>
+	      <li><a href="#Change-address-book-password"><span class="fa fa-angle-double-right"></span>Change the password of an address book</a></li>
+              <li><a href="#Change-address-book-name"><span class="fa fa-angle-double-right"></span>Change the name of an address book</a></li>
+              <li><a href="#Remove-address-book-account-label"><span class="fa fa-angle-double-right"></span>Remove an existing account label from an address book</a></li>
+	      <li><a href="#Add-address-book-account-label"><span class="fa fa-angle-double-right"></span>Add an account label to an address book</a></li>
+              <li><a href="#Change-address-book-account-label"><span class="fa fa-angle-double-right"></span>Change an existing account label in an address book</a></li>
+	     <li><a href="#Get-address-book-account-label"><span class="fa fa-angle-double-right"></span>Get an existing account label from an address book</a></li>
+            </ul>
+          </li>
+          <li><a href="#Wallet">Wallet</a>
+            <ul class="nav">
+	      <li><a href="#List-wallets"><span class="fa fa-angle-double-right"></span>Get all wallets</a></li>
+              <li><a href="#Create-wallet"><span class="fa fa-angle-double-right"></span>Create a new wallet</a></li>
+              <li><a href="#Open-wallet"><span class="fa fa-angle-double-right"></span>Open a wallet</a></li>
+              <li><a href="#Wallet-info"><span class="fa fa-angle-double-right"></span>Return information about a wallet</a></li>
+	      <li><a href="#Close-wallet"><span class="fa fa-angle-double-right"></span>Close a wallet</a></li>
+              <li><a href="#Wallet-password-change"><span class="fa fa-angle-double-right"></span>Change the password of a wallet</a></li>
+              <li><a href="#Wallet-name-change"><span class="fa fa-angle-double-right"></span>Change the name of a wallet</a></li>
+	      <li><a href="#Wallet-add-new-account"><span class="fa fa-angle-double-right"></span>Add a new account to the wallet</a></li>
+              <li><a href="#Wallet-account-to-primary"><span class="fa fa-angle-double-right"></span>Set an existing account to be the primary account</a></li>
+	     <li><a href="#Wallet-account-remove"><span class="fa fa-angle-double-right"></span>Remove an existing account from a wallet</a></li>
+		<li><a href="#Update-account-label"><span class="fa fa-angle-double-right"></span>Update the label of an existing account</a></li>
+		<li><a href="#Send-transaction"><span class="fa fa-angle-double-right"></span>Send a new transaction</a></li>
+              <li><a href="#Sign-multisig-transaction"><span class="fa fa-angle-double-right"></span>Sign a multisig transaction</a></li>
+              <li><a href="#Validate-transaction"><span class="fa fa-angle-double-right"></span>Validate a new transaction</a></li>
+              <li><a href="#Unlock-account"><span class="fa fa-angle-double-right"></span>Start local harvesting</a></li>
+	      <li><a href="#Lock-account"><span class="fa fa-angle-double-right"></span>Stop local harvesting</a></li>
+              <li><a href="#Activate-delegated-harvesting"><span class="fa fa-angle-double-right"></span>Announce activation of delegated harvesting</a></li>
+              <li><a href="#Desactivate-delegated-harvesting"><span class="fa fa-angle-double-right"></span>Announce deactivation of delegated harvesting</a></li>
+	      <li><a href="#Check-unlocked"><span class="fa fa-angle-double-right"></span>Check if account is unlocked on remote server</a></li>
+              <li><a href="#Start-delegated-harvesting"><span class="fa fa-angle-double-right"></span>start delegated harvesting</a></li>
+	     <li><a href="#Stop-delegated-harvesting"><span class="fa fa-angle-double-right"></span>Stop delegated harvesting</a></li>
+            </ul>
+          </li>
+          <li><a href="#Account">Account</a>
+            <ul class="nav">
+	      <li><a href="#Account-info"><span class="fa fa-angle-double-right"></span>Get information about a specified account</a></li>
+              <li><a href="#Account-unconfirmed"><span class="fa fa-angle-double-right"></span>Get unconfirmed transactions</a></li>
+              <li><a href="#Account-confirmed"><span class="fa fa-angle-double-right"></span>Get confirmed transactions</a></li>
+              <li><a href="#Account-incoming"><span class="fa fa-angle-double-right"></span>Get incoming transactions</a></li>
+	      <li><a href="#Account-outgoing"><span class="fa fa-angle-double-right"></span>Get outgoing transactions</a></li>
+              <li><a href="#Account-all-transactions"><span class="fa fa-angle-double-right"></span>Get incoming and outgoing transactions</a></li>
+              <li><a href="#Account-harvested-blocks"><span class="fa fa-angle-double-right"></span>Retrieve harvested blocks for an account</a></li>
+            </ul>
+          </li>
+          <li><a href="#Node">Node</a>
+            <ul class="nav">
+	      <li><a href="#Boot-node"><span class="fa fa-angle-double-right"></span>Boot the local node</a></li>
+              <li><a href="#Check-local-node"><span class="fa fa-angle-double-right"></span>Check local node status</a></li>
+            </ul>
+          </li>
+          <li><a href="#Network">Network</a>
+            <ul class="nav">
+	      <li><a href="#Peer-peers"><span class="fa fa-angle-double-right"></span>List peers to which the specified peers are connected</a></li>
+	      <li><a href="#NIS-peers"><span class="fa fa-angle-double-right"></span>List peers to which the local NIS is connected</a></li>
+            </ul>
+          </li>
+          <li><a href="#Shutdown">Shutdown</a></li>
+        </ul>
+      </div>
+
+				<!--------------------------------->
+		<!--///////////////////////////////-->
+
+      <div class="col-md-9">
+	  <section><!--Background-->
+	   <section id="Background">
+          <h2><span class="fa fa-edit"></span> Background</h2>
+		  <hr>
+          <p><li>Built 100% from scratch (not a fork of any existing project)</li>
+<li>Built with test-driven development</li>
+<li>Uses innovative Proof-of-Importance algorithm: first reputation based blockchain algorithm</li>
+<li>Improves different features of POW and POS coins, being more efficient and environmentally friendly</li>
+<li>Nodes need not be expensive machines and run independent of the wallet</li>
+<li>One minute average block times</li>
+<li>First crypto with delegated harvesting</li>
+<li>First with localized spam protection</li>
+<li>First with Eigentrust++ peer reputation management for Nodes</li>
+<li>First editable m-of-n multisig with blockchain based alerts</li>
+<li>Offers encrypted, unencrypted and hex messaging</li>
+<li>Small memory footprint, easy to install, and portable client and server</li>
+<li>Zero currency inflation (fixed supply, all 9 billion coins released at launch)</li>
+
+<li>Has mobile wallet for both iOS and Android (coming soon)</li>
+<br>
+<p>The NEM Open Source development Github can be found <a href="https://github.com/NewEconomyMovement" target="_blank">here</a>.</p>
+
+<section id="Utility of the NEM Platform">
+<h3><span class="fa fa-edit"></span> Utility of the NEM Platform</h3>
+ <hr>
+NEM is a platform solution. NEM can be used for:<br><br>
+<ul>
+<li>Time stamping of events</li>
+
+<li>Messaging, encrypted or not</li>
+
+<li>Unique to NEM only, wallet agnostic, multi-signatory on-chain signing. Use case extension example – A specially written small footprint software in a thumb drive that can be used to sign transactions – PnP and does not require any booting or chain synchronisation. For starters, visit <a href="https://github.com/QuantumMechanics/XEMsign" target="_blank">XEMsign</a>.</li>
+
+<li>Sign-on for “password-less” applications, using NEM key ID (NEMKID) to authenticate a random challenge statement. Highly secure method of authentication. Can be used with a password for 2-FA.</li>
+
+<li>Mosaic Transaction (A Mosaic is a special kind of asset unique in NEM. An asset is also known as a colored coin, token, point, derivative, title, or share, and is application context based. A Mosaic however, is not a colored coin, as a Mosaic is created as a separate token rather than “coloring” a coin):
+
+<ul>
+<li>Assets are mutable, mutable with limit, or fixed in quantity
+<li>Each Mosaic type is uniquely named using namespace methodology
+<li>Assets can be made to expire after a defined time frame (using block times which are typically accurate, from seconds to tens of seconds)
+<li>An asset can be made to bag more assets – a derivative of a derivative of a derivative – endless permutations.
+<li>Assets can be made to peg to an asset, example price of a share.
+<li>Asset can be backed by a real world asset, e.g., gold.
+<li>Assets can be issued and transacted between issuer and user only and not between users, e.g., title to a land, or user identification.
+</ul>
+<br>
+<li>Future Business Rules (also known as smart contracts) implementation shall allow for:<br><br>
+<ul>
+<li>Decentralised Applications
+<li>Centralised Applications
+<li>Escrow solutions that use external events or blockchain events, enabling betting or derivatives to be implemented
+</ul>
+</ul>
+</section>
+<section id="Architecture">
+          <h3><span class="fa fa-edit"></span> Understanding the Architecture</h3>
+		  <hr>
+<img src="images/architecture.png" width="800px"></img></li>
+<br><br>
+The NEM solution has two main components. One is the NEM Infrastructure server (NIS). The other is the NEM Core Client (NCC - also synonymously known as NEM Community Client). Both these two are run as separate processes. They can be run from the same machine or in separate machines as shown in the above diagrams.
+<br><br>
+This architecture called a tiered architecture, is similar to the browser/webserver (or client/server) relationship.
+<br><br>
+The architecture gives rise to a very power solution architecture. With the NIS being able to run remotely on the “cloud”, one does not need to synchronise one’s local NCC at all, like what many cryptocoin technology is doing. The NIS is synchronised in the cloud and it does not take a lot of computing power. Bitcoin does that by using the Simplified Payment Verification (SPV) client server architecture. However, their version is very much an unproven patch on, and a workaround. 
+</section>
+<section id="NCC">
+          <h3><span class="fa fa-edit"></span> NCC</h3>
+		  <hr>
+The NCC packs many powerful features. On its own, the NCC is a thin client wallet while at the same time, is a webserver. It is a fast boot, browser based client that is independent of the NIS blockchain server. It gets connected to a server seamlessly (default need no configuration but this can be changed to suit) and one can transact immediately without having to wait. Separately, the NCC is also a webserver and allows a person who can program in any language to communicate with the NEM ecosystem via the JSON RESTful service that comes with the NCC. Inside the NCC, sits the NEM Core solution (<a href="http://bob.nem.ninja/org.nem.core/" target="_blank">reference document here</a>) which can also be used to talk directly with the NIS. However, this is more complicated and needs the user to understand how to format messages and transactions to be sent out. With the NCC and the JSON RESTful service this is made simpler. Any programmer who is well versed in programming can do a lot with the NCC. These include:		  
+<br><br>
+<ol>
+<li>Applications requiring configuring and signing multi-signature approvals
+<li>Initiating transactions
+<li>Sending messages
+<li>Sending Mosaics
+<li>Initiate/start/stop harvesting (mining)
+<li>Create new accounts
+<li>Manage accounts
+</ol>
+<br>
+The NCC, via the NEM core, is basically a window and gateway to NEM’s blockchain technology. The NCC, thus, allows simple to sophisticated applications to be programmed without ever needing to know how the NEM blockchain works, and in whatever language the programmer chooses that is JSON RESTful compliant.
+<br><br>
+Centralised smart contracts can therefore be easily achievable, without much payload to the blockchain. Although it can be contentious, smart contracts are better run and managed by central entities.
+Information on the NCC can be found <a href="https://github.com/NewEconomyMovement/NemCommunityClient" target="_blank">here</a>.
+</section>
+<section id="NIS">
+          <h3><span class="fa fa-edit"></span> NIS</h3>
+		  <hr>
+While the NCC acts as both a gateway and wallet to the NEM ecosystem, the NIS is basically a node in the peer to peer network. It verifies transactions, put them onto the blockchain (i.e., when it successfully harvests (mining in other crypto), maintains a database, synchronises the database with the rest of the network, manages Sybil attacks, and maintains its trustworthiness through the use of the Eigentrust ++ algorithm.
+<br><br>
+In addition to the above functions, the NIS is a window into the blockchain of NEM. It has its own set of JSON RESTful services that allows any application to query the state of the blockchain activities. These include, among others, account balance, Proof of Importance of an account, block height, transaction records, etc.
+<br><br>
+With NIS working hand in hand with the NCC, together, they form the core and solution platform of the NEM ecosystem.
+<br><br>
+The NIS is trustless, meaning, the NCC does not need to trust this NIS to be secured. Hence an NCC can simply connect to any NIS that is running. A NIS is a full node and the NCC can delegate any NIS to harvest for it without worrying if the NIS is malicious, and will steal its coins.
+<br><br>
+The solution is very simple, straightforward and easy to work on. It is holistic and the design picks itself up from the many mistakes made in previous releases of many cryptocoin solutions in the market.
+It is in fact full blown realisation of the blockchain technology.
+<br><br>
+One of the more important feature of the NIS is the blockchain timing. The block time is designed to work at 60s. It is fairly consistent and has very little variances. Hence, transactions are predictable and reliable.
+At 2 transactions per second, the platform is rather fast compared to many of its peers, although it is hoped that one day it can scale to hundreds, if not thousands of transactions per second. 
+The very basis of its design does allow it to be open and therefore making it possible for integration into higher performing nodes for higher transaction volumes.
+More information about the JSON RESTful APIs can be found <a href="http://bob.nem.ninja/docs/" target="_blank">here</a>.
+</section>
+</section><!--end of #Background-->
+	  
+	  				<!--------------------------------->
+	<!--///////////////////////////////-->
+		<section id="Examples">
+          <h2><span class="fa fa-edit"></span> Use Case Examples</h2>
+		  <hr>
+			<section id="Time-Stamping">
+				<h3>Time Stamping</h3>
+				<hr>
+Time stamping is a simple message system that allows someone to send something into the blockchain and time stamp a transaction. For example, one can send a time stamped event to a specific account with a message to say something like:
+<br><br>
+<font color="#008B8B"> <i>“Event Reference number: 4747959585”</i></font>
+<br><br>
+Subsequently, in the administrative portion of the work between parties in the real world, a document may have a reference number that references the above message. To make it a more legible service, one can write a program to read the message referenced and the time stamp.
+<br><br>
+			</section>
+			<section id="Messaging">
+				<h3>Messaging</h3>
+				<hr>
+				Transactions whether with any enclosed tokens or not, can include a message. The message can carry a maximum of 160 characters and can be optionally encrypted (reduced by a payload of 48 characters i.e., 112 characters maximum). It is especially useful for sending messages to be included in a transaction.
+			
+			</section>
+			<section id="Multisig">
+				<h3>Multisig</h3>
+				<hr>
+				One of the more important features of NEM is its unique multisig capability. It is unique because, unlike most other solutions out there, the multisig is not stored locally in a central wallet waiting for all to sign before it is broadcast. Instead the multisig is signed and posted onto the NIS. From the NIS, it is then propagated to all the other NIS, where, it is held for a defined period of up to 24 hours to be signed by the rest of the signatories. 
+
+<br><br>This gives rise to a distributed multisig solution that lives on the blockchain. When all required signatories have been signed, it is automatically broadcast to the blockchain as a valid transaction.
+
+<br><br>Based on the above solution, multisig becomes an embedded feature more so than a third party solution that is commonly deployed with most blockchain technology. It allows a programmer that wishes to automate multisig function to specifically program and call an API through the NCC to sign or initiate a transaction. This makes the multisig solution a very simple implementation.
+
+<br><br>There are more features that can be done with multisig. These are:
+<ul><br>
+<li>M of N feature, a minimum of M signatures to sign from a pool of N (maximum 32) authorised signatories
+<li>Adding and deleting signatories
+<li>Time to live transactions, i.e., given up to 24 hours for all signatories to sign a transaction
+</ul>
+<br>
+Multisig is especially useful for use cases like automated escrow or event activated services. Other types of usage may include centralised smart contract solutions. The multisig feature itself can be used to activate a series of other contracts or events.
+				<br><br>
+			</section>
+			<section id="NEM-ID">
+				<h3>NEM Key ID</h3>	
+				<hr>
+The public/private key solution of NEM is an easy to implement solution. It is based on python bindings to a C implementation of the Ed25519 public-key signature system solution.
+
+<br><br>With this library, one can quickly (2ms) create signing+verifying keypairs, derive a verifying key from a signing key, sign messages, and verify the signatures. The keys and signatures are very short, making them easy to handle and incorporate into other protocols. All known attacks take at least 2^128 operations, providing the same security level as AES-128, NIST P-256, and RSA-3072.
+<br><br>More information on the Ed25519 public-key signature system solution can be found on our <a href="https://github.com/NewEconomyMovement/python-ed25519" target="_blank">github</a>.
+<br><br>By making use of NEMKID, logging on to a service does not require the server of this service to store passwords in the database. Alternatively, it can use the NEMKID to further verify the person if the system has a password requirement.  NEMKID essentially produces a challenge alphanumeric word for the user to sign. If the signature is correct, then the user is verified as the rightful user. 
+<br><br>NEMKID can be used for two factor authentication and can be developed separately and independent of NEM. 
+				
+			</section>
+			<section id="Auto-Token-Distribution">
+				<h3>Auto Token Distribution</h3>	
+				<hr>
+Applications that require automatic token distribution using multisig can easily be incorporated without much work and a few API calls. This could include in-game wallet token awards or a simple faucet solution such as the live one used by <a href="http://faucet.nem.io" target="_blank">NEM here</a>.
+				
+			</section>
+
+</section><!--end of #Examples-->
+		  			<!--------------------------------->
+	<!--///////////////////////////////-->
+		<section id="Mosaic">
+          <h2><span class="fa fa-edit"></span> Mosaics</h2>
+		  <hr>
+Mosaic is a very important backbone of the NEM platform. Mosaic adds depth and breath into NEM. Given this Mosaic, we are now able to do a lot more, and which actually opens up a plethora of things that otherwise cannot be done in most blockchain platforms. Coupled with NEM’s multisig, it is in a class of its own. It will officially put us as a true platform, and no more a mere cryptocoin.
+
+<br><br>	Basic things you need to know are Namespace and Mosaic. The easiest way to appreciate it is the folder and file analogy in our PC. Imagine that a folder has to be unique in our root directory. Namespace addresses this unique feature. Each namespace is unique. If one creates a namespace, that namespace will appear unique in the NEM ecosystem. For example, if one were to create a namespace called, Foo, that namespace will be unique only for the account that created it. Namespace and domain name are the same in this document and shall be used interchangeably.
+
+<br><br>	Next up, is the Mosaic itself. Mosaic is like a file in the PC directory system, and like a file in a directory, a Mosaic can have the same name but in different namespaces/sub-domains. In NEM, Namespaces can have up to 3 levels.
+
+<br><br>	<font color="#008B8B"> <i>Examples:</i></font>
+<br><br>Namespace: Jetstar
+<br>Subdomain Level 1:moon
+<br>Subdomain Level 2:mars
+
+<br><br>	Mosaics:
+
+<br>Rock
+<br>Stone
+<br>Gem
+
+<br><br>	Accordingly, the fully qualified names of the above Mosaics are:<br><br>
+
+<li><font color="#008B8B"> <i>“Jetstar*rock, Jetstar*stone, Jetstar*gem”</i></font> (First level Mosaics)
+<li><font color="#008B8B"> <i>“Jetstar.moon*rock, Jetstar.moon*stone, Jetstar.moon*gem”</i></font> (Second level Mosaics)
+<li><font color="#008B8B"> <i>“Jetstar.moon.mars* rock,  Jetstar.moon.mars* stone, Jetstar.moon.mars*gem”</i></font> (Third level Mosaics)
+
+<br><br>	Note that the root Namespace is the leader, i.e., it works in the opposite to the normal domain naming convention.
+
+<br><br>	Each of the above mosaics is made unique by the namespace’s fully qualified name. Also, the Mosaic is preceded by an “*” to differentiate it from the namespace.
+
+<br><br>	In summary, everything under the top level domain belongs to the account that created it. In the above examples, the top level domain name is Jetstar.
+	
+</section>		  
+			<section id="Namespace-and-Mosaic">
+				<h3>Significance of Namespace and Mosaic</h3>
+				<hr>
+Namespace gives rise to a unique naming convention. Mosaic gives rise to the creation of assets. Some call it a colored coin while others may call it a token. We call it Mosaic, because we are not merely coloring a coin per se but we are creating a new coin. It will also finally evolve into more than just a mere “colored coin”. It is an asset class that will take on many types of properties when it is full blown (hence we call it a Mosaic as it evolves to form the “big picture” when you start tiling them) .
+
+<br><br>	Our initial rollout for Mosaic  has the following properties:
+				
+<ul>
+<li>description 
+<ul><li>free-text description of the Mosaic up to some size limit, changeable by the owner</ul>
+<li>divisibility 
+<ul><li>adding this makes a quantity divisible, up to 4 decimal precision. A divisibility of 2 means 2 decimal places</ul>
+<li>information 
+<ul><li>arbitrary byte array that can be in the property, with a size limit; this is the same as “messages” in NEM already, with no changes</ul>
+<li>mutable quantity  
+<ul><li>This property allows the quantity to be mutable or not</ul>
+<li>name (required)
+<ul><li>name of the mosaic, up to some size limit; must be unique under the domain name</ul>
+<li>domain name or namespace (required)
+<ul><li>globally unique fully qualified domain name that is registered and owned by the Mosaic creator; this is just like a TLD in Internet domain name registry</ul>
+<li>quantity 
+<ul><li>The amount of mosaic in circulation. If immutable, it is fixed, otherwise it is dynamic, i.e., more can be created or destroyed </ul>
+<li>transferability 
+<ul><li>If no, it means it can only be transferred between user and creator. Otherwise, it is freely transferable</ul>
+
+</ul>	
+					
+			</section>
+			<section id="Mosaic-Use-Cases">
+				<h3>Mosaic Use Cases</h3>
+				<hr>	
+Every Mosaic is unique. The creation of namespace gives the creator an infinite number of unique Mosaics that can be created. So what is so good about each Mosaic? Each Mosaic allows the creation of a token for anything imaginable. Some examples are:
+<br><br><ul>
+<li>Keeping track of in-game Points, allowing them to be traded or sold easily. A wallet can easily be built into the Game. Even as NIS can be embedded into the Game software so that the user can actually harvest while playing the game.
+
+<li>Loyalty points, such as air miles and purchases online/offline. Again, the wallet can be customised and built into the solution of the program.
+
+<li>Issue of securities – each Mosaic for example, is tagged to 1 share. This is especially good for crowdfunding platforms and issuance of shares using Mosaic.
+
+<li>Issue of Mosaic backed by assets (derivatives), including Bitcoins – bitcoins are exchanged for specially defined Mosaics so that transaction of Bitcoins can be much faster, fungible, free from tedious node synchronisation – Coinbase model – with wallet now belonging to the end user and not with the central depository.
+
+<li>Issuance of titles or licenses – fishing license, driver’s license, land title, etc.
+
+<li>Betting– issued as either dollar denominated chips (i.e. an asset backed security) for online betting.
+
+<li>Vouchers and Coupons – used as claimable coupons and vouchers for material goods and services, or food.
+
+<li>Proof of identity – membership, sign on proof, and access.
+
+<li>Wholesale altcoin/token porting – porting the entire altcoin or token created from a pre-blockchain project.
+
+<li>Voting – using Mosaic as a proof of voting eligibility
+				
+</ul>				
+
+			</section>
+				
+			<section id="Mosaic-Extensibility">
+				<h3>Extensibility of Mosaics</h3>
+				<hr>	
+The NEM platform as aforementioned, allows a sophisticated, turing complete or not software program developed in any language, to interact with it via JSON RESTful APIs. 
+
+<br><br>There are a couple of methods to do so. Either it uses the NCC/NIS APIs or integrate directly with the NEM Core solution to interact with the blockchain. For beginners, it is probably better and faster to use the NCC as a webserver, and separately, the NIS, to interact with the blockchain.
+
+<br><br>The ability to integrate with the NEM platform easily with the above methods, open up a whole new dimension on the use of blockchain. It allows any project to be developed easily in a short period of time. Some examples are:
+<br><br>				
+<li>Coinbase/Bitpay type of solution
+<li>A centralized API service solution
+<li>Trade Settlement and Pre-borrowed Assured Token solution
+<li>2 Factor Authentication Solution
+				
+				<br><br>
+			</section>	
+			
+			<section id="Coinbase-Solution">
+				<h3>Coinbase/Bitpay type of solution</h3>
+				<hr>	
+Coinbase core security is a very expensive solution. NEM has it on the blockchain. This takes away the high costs involved in developing  and maintaining the security for a set up like Coinbase. Value store is now embedded in the wallet, away from the operator. In other words, the Coinbase solution reduces itself to just a merchant and exchange solution, more so than a host for keeping wallets for others if we use NEM. Coinbase was developed as a business out of the shortcoming of Bitcoin in that it is hard to use a solution like Bitcoin for everyday use. Coinbase made it easy. NEM has bridged that and it is not hard and time consuming to fire up and use NEM.
+
+<br><br>One of the core offerings of Coinbase is to keep a user’s wallet in Coinbase just so that the user has a recourse, i.e., passing the responsibility to Coinbase to manage their wallets as some of these users are afraid to lose their wallets due to hardware failure or theft. Additionally, with the wallet kept in a central location, it also allows the user to email or send crypto to friends easily.
+
+<br><br>NEM offers an on-chain solution to the above problem by way of letting an operator like Coinbase to host the wallet with the operator and having a multisig solution entrusted to the operator (like an escrow) and signed off by the user. This is part of the NEM platform offering. This ease of implementation makes a project like Coinbase seems such a simple offering, and easy, too.
+
+			</section>	
+			
+			<section id="Centralized-API">
+				<h3>A centralized API service solution</h3>
+				<hr>	
+There are a number of companies that have developed a whole set of APIs just so that it allows any developer to develop any solution on the Blockchain. Every company that offers this service will need to develop their own set of APIs and offer the same with little differentiation. The amount of money spent on doing this could be substantial.
+
+<br><br>Centralized APIs take away the cryptic nature of the Bitcoin blockchain and put in a whole set of SDK and APIs to make it simple for people to integrate a blockchain into their solution. But, NEM takes away the need for anyone to build any APIs!!
+
+<br><br>Unlike centralize APIs, NEM is open for all to use and comes with its own blockchain solution. So, essentially NEM is an open source version of these centralized APIs, and with the blockchain thrown in. NEM makes an improved version of a blockchain easy to use in the first instance. It basically make scentralized APIs initiatives redundant. Most importantly, NEM’s decentralized API makes it fail proof, i.e., no single point of failure and takes away the “middleware” of the centralized APIs. It gives them direct access to the blockchain.
+
+<br><br>So, yes, you can start your blockchain project now!
+<br><br>
+			</section>	
+			
+			<section id="Trade-Settlement">
+				<h3>Trade Settlement and Pre-borrowed Assured Token solution</h3>
+				<hr>	
+A recent project was launched to do trade settlement and pre-borrowed assured token solution. It basically is a project for settlement and managing pre-borrowed assured tokens using blockchain. NEM is an enabler that can easily be adapted with its full set of APIs.
+				<br><br>
+			</section>	
+			
+			<section id="2-Factor-Authentication">
+				<h3>2 Factor Authentication Solution</h3>
+				<hr>	
+There exists a few projects that use Private and Public keys for authentication. NEMID is a ready library for that and can be easily adapted to make it as a business.
+	</section>	
+<section id="Conclusion">
+				<h2><span class="fa fa-edit"></span> Conclusion</h2>
+				<hr>	
+The above is not an exhaustive list of projects that NEM can do. The underlying message is that NEM is a platform that can be easily adapted into any project that makes use of a blockchain. It has all the APIs and tools needed for anyone who is gamed enough to use blockchain as the backbone, including NEM's inbuilt multisig solutions. NEM’s APIs are true blockchain APIs that are universal for all to use without restriction, and have no single point of faillure.
+
+
+<br><br>The following is a detailed outline of our NCC APIs that can be used for anyone who wishes to work on the NEM platform. These APIs are always being updated and more APIs shall be added on later as we introduce more features, e.g., the Mosaic. 
+
+			</section>	
+				
+		</section><!--end of #Mosaic-->
+		  			<!--------------------------------->
+	<!--///////////////////////////////-->
+	
+        <section id="API-Overview">
+          <h2><span class="fa fa-edit"></span> NCC API Overview</h2>
+		  <hr>
+          <p>The web-context is defined as <pre>/ncc/api</pre> For instance the full URI would be <pre>/ncc/api/client/info</pre></p>
+<p>Amount values are all in the smallest possible XEM fraction. The smallest XEM fraction is 6 decimal places. In other words, 1,000,000 means 1.000000 XEM.</p>
+<p>Rest calls must have the content type set: <pre>Content-Type: application/json</pre></p>
+	<p>You can use API calls easily in PHP with <a href="https://github.com/NewEconomyMovement/php2nem" target="_blank">php2nem</a> or in nodeJS with <a href="https://github.com/NewEconomyMovement/nodejs2nem" target="_blank">nodejs2nem</a>. You can also use any language that is Json RESTful compliant.</p>
+        </section><!--end of #Overview-->
+
+					<!--------------------------------->
+	<!--///////////////////////////////-->
+
+        <section id="NCC-information">
+          <h2><span class="fa fa-edit"></span> Retrieving NCC information</h2>
+	<hr>
+	<section id="NCC-status">
+            <h3>Get status of NCC server</h3>
+		<pre>/status</pre>
+            <p>Currently it is only 'running' (3)</p>
+            <ul>
+	  <li>Request Method: GET</li>
+	 <li>Request: -</li>
+	<li>Response: NemRequestResult</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>NemRequestResult:</p>
+		<pre>{
+    "code": 3,            # 0 - UNKNOWN
+                          # 1 - STOPPED
+                          # 2 - STARTING
+                          # 3 - RUNNING
+                          # 4 - BOOTING
+                          # 5 - BOOTED
+                          # 6 - SYNCHRONIZED
+    "type": 4,            # A NemRequestResult can have several meanings. 
+                          # The type indicates the meaning. 
+                          # type 4 - TYPE_STATUS, the code and the message fields 
+                          # have to be interpreted as status.
+    "message": "status"
+}</pre>
+          </section>
+
+		<!--------------------------------->
+
+          <section id="NCC-infos">
+            <h3>Get information about the NCC server</h3>
+		<pre>/info/ncc</pre>
+            <ul>
+	  <li>Request Method: GET</li>
+	 <li>Request: -</li>
+	<li>Response: NisInfoViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>NisInfoViewModel:</p>
+		<pre>{
+    "metaData": {
+        "currentTime": 1179142,               # time in milli seconds
+        "application": "NEM",                 # name of application
+        "startTime": 1177027,                 # time in milli seconds, when application was started
+        "version": "0.2.0-DEVELOPER BUILD",   # version of application
+        "signer": null                        # name of the signer of the code
+    },
+    "remoteServer": null,                     # not used
+    "language": "DE"                          # language for UI
+}</pre>
+          </section>
+
+			<!--------------------------------->
+
+          <section id="NIS-infos">
+            <h3>Get information about the NIS server</h3>
+		<pre>/info/nis</pre>
+            <ul>
+	  <li>Request Method: GET</li>
+	 <li>Request: -</li>
+	<li>Response: NisInfoViewModel</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>NisInfoViewModel:</p>
+		<pre>{
+    "metaData": {
+        "currentTime": 1179142,               # time in milli seconds
+        "application": "NEM",                 # name of application
+        "startTime": 1177027,                 # time in milli seconds, when application was started
+        "version": "0.2.0-DEVELOPER BUILD",   # version of application
+        "signer": null                        # name of the signer of the code
+    },
+    "remoteServer": null,                     # not used
+    "language": "DE"                          # language for UI
+}</pre>
+          </section>
+
+			<!--------------------------------->
+
+          <section id="NIS-availability">
+            <h3>Check availability of NIS server</h3>
+            <pre>/info/nis/check</pre>
+            <ul>
+	  <li>Request Method: GET</li>
+	 <li>Request: -</li>
+	<li>Response:</li>
+	<pre>** 0 - NIS server is not running ** 1 - NIS server is running (but may not be booted)</pre>
+	<li>Dependent from NIS: yes</li>
+	    </ul>
+          </section>
+
+			<!--------------------------------->
+
+        </section><!--end of #NCC informations-->
+
+	<!--///////////////////////////////-->
+
+        <section id="Configuration">
+          <h2><span class="fa fa-edit"></span> Configuration</h2>
+	<hr>
+	<section id="Current-config">
+            <h3>Get the current configuration</h3>
+		<pre>/configuration/get</pre>
+            <ul>
+	  <li>Request Method: GET</li>
+	 <li>Request: -</li>
+	<li>Response: ConfigurationViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>ConfigurationViewModel:</p>
+		<pre>{
+    "remoteServer": {
+        "protocol":"http",          # "http" or "https"
+        "host":"79.220.34.156",         # ip address or "localhost" to use a local NIS
+        "port":7890             # port to use
+    },
+    "nisBootInfo": {
+        "nodeName": "Alice",            # (arbitrary) name of the node
+        "bootNis": 0,               # 1=auto-boot, 0=do not auto-boot
+        "account": "TALICEMYYJFPJ4FWCMMNFCCOTFV635SBL2QWP73K"   # account to tie the node to 
+                                    # or "" to use the wallet's primary account
+    },
+    "language": "DE"                # 2 letter abbreviation of the language to use
+}</pre>
+          </section>
+
+			<!--------------------------------->
+
+          <section id="Update-config">
+            <h3>Updates the current configuration with the given values</h3>
+		<pre>/configuration/update</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: ConfigurationViewModel</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>ConfigurationViewModel:</p>
+		<pre>{
+    "remoteServer": {
+        "protocol":"http",          # "http" or "https"
+        "host":"79.220.34.156",         # ip address or "localhost" to use a local NIS
+        "port":7890             # port to use
+    },
+    "nisBootInfo": {
+        "nodeName": "Alice",            # (arbitrary) name of the node
+        "bootNis": 0,               # 1=auto-boot, 0=do not auto-boot
+        "account": "TALICEMYYJFPJ4FWCMMNFCCOTFV635SBL2QWP73K"   # account to tie the node to 
+                                    # or "" to use the wallet's primary account
+    },
+    "language": "DE"                # 2 letter abbreviation of the language to use
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+        </section><!--end of #Configuration-->
+
+	<!--///////////////////////////-->
+
+        <section id="Address-book">
+          <h2><span class="fa fa-edit"></span> Address Book</h2>
+	<hr>
+	<section id="Create-address-book">
+            <h3>Creates a new, empty address book</h3>
+		<p>The address book is stored encrypted in the configured address book directory. The name of the address book file is the encoded (URL encoded) version of the address book name. The provided password is used to encrypt the address book.</p>
+		<pre>/addressbook/create</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AddressBookNamePasswordPair</li>
+	<li>Response: AddressBookViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>AddressBookNamePasswordPair:</p>
+		<pre>{
+    "addressBook": "myAddressBook",
+    "password": "mySecretPassword"
+}</pre>
+		<p>AddressBookViewModel:</p>
+		<pre>{
+    "addressBook": "myAddressBook",
+    "accountLabels" : [{
+        "address": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+        "publicLabel": "Alice",
+        "privateLabel": "sister"
+    },
+    {
+        "address": "TBOBBSXX7BESJXDWGLP5Z7FM5HSTKUH5WIMPW562",
+        "publicLabel": "Bob",
+        "privateLabel": "brother"
+    }]
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Open-address-book">
+            <h3>Open an address book</h3>
+		<p>The address book is defined by the address book name. The address book has to be located in the address book storage location. The password must match the password of the given address book.</p>
+		<pre>/addressbook/open</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AddressBookNamePasswordPair</li>
+	<li>Response: AddressBookViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>AddressBookNamePasswordPair:</p>
+		<pre>{
+    "addressBook": "myAddressBook",
+    "password": "mySecretPassword"
+}</pre>
+		<p>AddressBookViewModel:</p>
+		<pre>{
+    "addressBook": "myAddressBook",
+    "accountLabels" : [{
+        "address": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+        "publicLabel": "Alice",
+        "privateLabel": "sister"
+    },
+    {
+        "address": "TBOBBSXX7BESJXDWGLP5Z7FM5HSTKUH5WIMPW562",
+        "publicLabel": "Bob",
+        "privateLabel": "brother"
+    }]
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Address-book-info">
+            <h3>Returns information about an address book that is already open</h3>
+		<pre>/addressbook/info</pre>
+             <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AddressBookNamePasswordPair</li>
+	<li>Response: AddressBookViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>AddressBookNamePasswordPair:</p>
+		<pre>{
+    "addressBook": "myAddressBook",
+    "password": "mySecretPassword"
+}</pre>
+		<p>AddressBookViewModel:</p>
+		<pre>{
+    "addressBook": "myAddressBook",
+    "accountLabels" : [{
+        "address": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+        "publicLabel": "Alice",
+        "privateLabel": "sister"
+    },
+    {
+        "address": "TBOBBSXX7BESJXDWGLP5Z7FM5HSTKUH5WIMPW562",
+        "publicLabel": "Bob",
+        "privateLabel": "brother"
+    }]
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Close-address-book">
+            <h3>Closes an address book</h3>
+		<p>Closes an address book by removing it from the list of opened address books</p>
+		<pre>/addressbook/close</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AddressBookName</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>AddressBookName:</p>
+		<pre>{
+    "addressBook": "myAddressBook"
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+	 <section id="Change-address-book-password">
+            <h3>Changes the password of an address book</h3>
+		<pre>/addressbook/password/change</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AddressBookNamePasswordBag</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>AddressBookNamePasswordBag:</p>
+		<pre>{
+    "addressBook": "myAddresses",
+    "password": "mySecretPassword",
+    "newName": "newNameForAddressBook",                 # optional, required for address book name change
+    "newPassword": "newAndVerySecretPassword",              # optional, required for password change
+    "address": "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",  # optional, required for account label related requests
+    "publicLabel": "Alice",                             # optional, required for account label related requests
+    "privateLabel": "sister"                            # optional, required for account label related requests
+ }
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Change-address-book-name">
+            <h3>Changes the name of an address book</h3>
+		<pre>/addressbook/name/change</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AddressBookNamePasswordBag</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>AddressBookNamePasswordBag:</p>
+		<pre>{
+    "addressBook": "myAddresses",
+    "password": "mySecretPassword",
+    "newName": "newNameForAddressBook",                 # optional, required for address book name change
+    "newPassword": "newAndVerySecretPassword",              # optional, required for password change
+    "address": "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",  # optional, required for account label related requests
+    "publicLabel": "Alice",                             # optional, required for account label related requests
+    "privateLabel": "sister"                            # optional, required for account label related requests
+ }
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Remove-address-book-account-label">
+            <h3>Removes an existing account label from an address book</h3>
+		<pre>/addressbook/accountlabel/remove</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AddressBookNamePasswordBag</li>
+	<li>Response: AddressBookViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>AddressBookNamePasswordBag:</p>
+		<pre>{
+    "addressBook": "myAddresses",
+    "password": "mySecretPassword",
+    "newName": "newNameForAddressBook",                 # optional, required for address book name change
+    "newPassword": "newAndVerySecretPassword",              # optional, required for password change
+    "address": "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",  # optional, required for account label related requests
+    "publicLabel": "Alice",                             # optional, required for account label related requests
+    "privateLabel": "sister"                            # optional, required for account label related requests
+ }
+</pre>
+	<p>AddressBookViewModel:</p>
+		<pre>{
+    "addressBook": "myAddressBook",
+    "accountLabels" : [{
+        "address": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+        "publicLabel": "Alice",
+        "privateLabel": "sister"
+    },
+    {
+        "address": "TBOBBSXX7BESJXDWGLP5Z7FM5HSTKUH5WIMPW562",
+        "publicLabel": "Bob",
+        "privateLabel": "brother"
+    }]
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Add-address-book-account-label">
+            <h3>Adds an account label to an address book</h3>
+		<pre>/addressbook/accountlabel/add</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AddressBookNamePasswordBag</li>
+	<li>Response: AccountLabel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>AddressBookNamePasswordBag:</p>
+		<pre>{
+    "addressBook": "myAddresses",
+    "password": "mySecretPassword",
+    "newName": "newNameForAddressBook",                 # optional, required for address book name change
+    "newPassword": "newAndVerySecretPassword",              # optional, required for password change
+    "address": "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",  # optional, required for account label related requests
+    "publicLabel": "Alice",                             # optional, required for account label related requests
+    "privateLabel": "sister"                            # optional, required for account label related requests
+ }
+</pre>
+	<p>AccountLabel:</p>
+		<pre>{
+    "address" : "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+    "publicLabel": "Alice",
+    "privateLabel": "sister"
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Change-address-book-account-label">
+            <h3>Changes an existing account label in an address book</h3>
+		<pre>/addressbook/accountlabel/change</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AddressBookNamePasswordBag</li>
+	<li>Response: AccountLabel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>AddressBookNamePasswordBag:</p>
+		<pre>{
+    "addressBook": "myAddresses",
+    "password": "mySecretPassword",
+    "newName": "newNameForAddressBook",                 # optional, required for address book name change
+    "newPassword": "newAndVerySecretPassword",              # optional, required for password change
+    "address": "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",  # optional, required for account label related requests
+    "publicLabel": "Alice",                             # optional, required for account label related requests
+    "privateLabel": "sister"                            # optional, required for account label related requests
+ }
+</pre>
+	<p>AccountLabel:</p>
+		<pre>{
+    "address" : "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+    "publicLabel": "Alice",
+    "privateLabel": "sister"
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Get-address-book-account-label">
+            <h3>Gets an existing account label from an address book</h3>
+		<p>The address parameter in the AddressBookNamePasswordBag must be supplied</p>
+		<pre>/addressbook/accountlabel/find</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AddressBookNamePasswordBag</li>
+	<li>Response: AccountLabel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>AddressBookNamePasswordBag:</p>
+		<pre>{
+    "addressBook": "myAddresses",
+    "password": "mySecretPassword",
+    "newName": "newNameForAddressBook",                 # optional, required for address book name change
+    "newPassword": "newAndVerySecretPassword",              # optional, required for password change
+    "address": "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",  # optional, required for account label related requests
+    "publicLabel": "Alice",                             # optional, required for account label related requests
+    "privateLabel": "sister"                            # optional, required for account label related requests
+ }
+</pre>
+	<p>AccountLabel:</p>
+		<pre>{
+    "address" : "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+    "publicLabel": "Alice",
+    "privateLabel": "sister"
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+        </section><!--end of #NCC address book-->
+
+		<!--///////////////////////////-->
+
+        <section id="Wallet">
+          <h2><span class="fa fa-edit"></span> Wallet</h2>
+	<hr>
+	<section id="List-wallets">
+            <h3>Gets all wallets that are located at the configured storage location for wallets</h3>
+		<pre>/wallet/list</pre>
+            <ul>
+	  <li>Request Method: GET</li>
+	 <li>Request: -</li>
+	<li>Response: ListOfWalletDescriptorViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>ListOfWalletDescriptorViewModel:</p>
+		<pre>{
+    "wallets": [{
+        "wallet": "Test",
+        "location": "C:\\Users\\Thies1965\\git\\NemCommunityClient\\nem-client-api\\Test.wlt"
+    },
+    {
+        "wallet": "Thies1965",
+        "location": "C:\\Users\\Thies1965\\git\\NemCommunityClient\\nem-client-api\\Thies1965.wlt"
+    }]
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Create-wallet">
+            <h3>Creates a new wallet with one account in it</h3>
+		<p>The wallet is stored encrypted in the configured wallet directory. The name of the wallet file is the encoded (URL encoded) version of the wallet name. The provided password is used to encrypt the wallet.</p>
+		<pre>/wallet/create</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: WalletNamePasswordPair</li>
+	<li>Response: WalletViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>WalletNamePasswordPair:</p>
+		<pre>{
+    "wallet": "PrivateWallet",
+    "password": "Very Secret Password To The Wallet, can contain ÄÖÜäöüß"
+}</pre>
+		<p>WalletViewModel:</p>
+		<pre>{
+    "otherAccounts": [],
+    "lastRefresh": 1408796675000,
+    "name": "Test",
+    "primaryAccount": {
+        "address": "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+        "balance": 0,
+        "importance": 0.0,
+        "label": null,
+        "publicKey": "03c55bd250e56c292ed4c898b0883676313283251d21b6a9099bb989db99d736d2",
+        "harvestedBlocks": 0,
+        "status": "LOCKED",
+        "remoteStatus": "INACTIVE"
+    }
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Open-wallet">
+            <h3>Open a wallet</h3>
+		<p>The wallet is defined by the wallet name. The wallet has to be located in the wallet storage location. The password must match the password of the given wallet. For opening a wallet at a different location the function importWallet has to be used.</p>
+		<pre>/wallet/open</pre>
+             <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: WalletNamePasswordPair</li>
+	<li>Response: WalletViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>WalletNamePasswordPair:</p>
+		<pre>{
+    "wallet": "PrivateWallet",
+    "password": "Very Secret Password To The Wallet, can contain ÄÖÜäöüß"
+}</pre>
+		<p>WalletViewModel:</p>
+		<pre>{
+    "otherAccounts": [],
+    "lastRefresh": 1408796675000,
+    "name": "Test",
+    "primaryAccount": {
+        "address": "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+        "balance": 0,
+        "importance": 0.0,
+        "label": null,
+        "publicKey": "03c55bd250e56c292ed4c898b0883676313283251d21b6a9099bb989db99d736d2",
+        "harvestedBlocks": 0,
+        "status": "LOCKED",
+        "remoteStatus": "INACTIVE"
+    }
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Wallet-info">
+            <h3>Returns information about a wallet that is already open</h3>
+		<pre>/wallet/info</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: WalletName</li>
+	<li>Response: WalletViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>WalletName:</p>
+		<pre>{
+    "wallet": "PrivateWallet"
+}</pre>
+
+	<p>WalletViewModel:</p>
+		<pre>{
+    "otherAccounts": [],
+    "lastRefresh": 1408796675000,
+    "name": "Test",
+    "primaryAccount": {
+        "address": "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+        "balance": 0,
+        "importance": 0.0,
+        "label": null,
+        "publicKey": "03c55bd250e56c292ed4c898b0883676313283251d21b6a9099bb989db99d736d2",
+        "harvestedBlocks": 0,
+        "status": "LOCKED",
+        "remoteStatus": "INACTIVE"
+    }
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+	 <section id="Close-wallet">
+            <h3>Closes a wallet by removing it from the list of opened wallets</h3>
+		<pre>/wallet/close</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: WalletName</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>WalletName:</p>
+		<pre>{
+    "wallet": "PrivateWallet"
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Wallet-password-change">
+            <h3>Changes the password of a wallet</h3>
+		<pre>/wallet/password/change</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: WalletNamePasswordBag</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>WalletNamePasswordBag:</p>
+		<pre>{
+    "wallet": "PrivateWallet",
+    "password": "Very Secret Password To The Wallet",
+    "newPassword": "NEW very secret Password",   # optional, required for password change
+    "accountKey": "23ec43284fe99e0bef912682a4a3b963e17b658dc0e4b9c596436bb331613389",  # optional
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2"    # optional, required for remove account, label change
+}
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Wallet-name-change">
+            <h3>Changes the name of a wallet</h3>
+		<pre>/wallet/name/change</pre>
+         <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: WalletNamePasswordBag</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>WalletNamePasswordBag:</p>
+		<pre>{
+    "wallet": "PrivateWallet",
+    "password": "Very Secret Password To The Wallet",
+    "newName": "P-Wallet"         ,   # optional, required for wallet name change
+    "accountKey": "23ec43284fe99e0bef912682a4a3b963e17b658dc0e4b9c596436bb331613389", # optional
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2"  # optional, required for remove account, label change
+}
+</pre>  </section>
+
+				<!--------------------------------->
+
+	<section id="Wallet-add-new-account">
+            <h3>Add a new account to the wallet</h3>
+		<pre>/wallet/account/new</pre>
+             <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: WalletNamePasswordBag</li>
+	<li>Response: AccountViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>WalletNamePasswordBag:</p>
+		<pre>{
+    "wallet": "PrivateWallet",
+    "password": "Very Secret Password To The Wallet",
+    "accountKey": "23ec43284fe99e0bef912682a4a3b963e17b658dc0e4b9c596436bb331613389",  # optional
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2"  # optional, required for remove account, label change
+}
+</pre>
+
+		<p>AccountViewModel:</p>
+		<pre>{
+    "address": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+    "balance": 0,
+    "importance": 0.0,
+    "label": "private Label",
+    "publicKey": null,
+    "harvestedBlocks": 0,
+    "status": "LOCKED"
+}
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Wallet-account-to-primary">
+            <h3>Set an existing account to be the primary account</h3>
+		<pre>/wallet/account/primary</pre>
+           <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: WalletNamePasswordBag</li>
+	<li>Response: AccountViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>WalletNamePasswordBag:</p>
+		<pre>{
+    "wallet": "PrivateWallet",
+    "password": "Very Secret Password To The Wallet",
+    "accountKey": "23ec43284fe99e0bef912682a4a3b963e17b658dc0e4b9c596436bb331613389",  # optional
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2"  # optional, required for remove account, label change
+}
+</pre>
+
+		<p>AccountViewModel:</p>
+		<pre>{
+    "address": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+    "balance": 0,
+    "importance": 0.0,
+    "label": "private Label",
+    "publicKey": null,
+    "harvestedBlocks": 0,
+    "status": "LOCKED"
+}
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Wallet-account-remove">
+            <h3>Removes an existing account from a wallet.</h3>
+		<pre>/wallet/account/remove</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: WalletNamePasswordBag</li>
+	<li>Response: AccountViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>WalletNamePasswordBag:</p>
+		<pre>{
+    "wallet": "PrivateWallet",
+    "password": "Very Secret Password To The Wallet",
+    "accountKey": "23ec43284fe99e0bef912682a4a3b963e17b658dc0e4b9c596436bb331613389",  # optional
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2"  # optional, required for remove account, label change
+}
+</pre>
+
+		<p>AccountViewModel:</p>
+		<pre>{
+    "address": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+    "balance": 0,
+    "importance": 0.0,
+    "label": "private Label",
+    "publicKey": null,
+    "harvestedBlocks": 0,
+    "status": "LOCKED"
+}
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Update-account-label">
+            <h3>Updates the label of an existing account</h3>
+		<pre>/wallet/account/label</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: WalletNamePasswordBag</li>
+	<li>Response: AccountViewModel</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+		<p>WalletNamePasswordBag:</p>
+		<pre>{
+    "wallet": "PrivateWallet",
+    "password": "Very Secret Password To The Wallet",
+    "accountKey": "23ec43284fe99e0bef912682a4a3b963e17b658dc0e4b9c596436bb331613389",  # optional
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2"  # optional, required for remove account, label change
+}
+</pre>
+
+		<p>AccountViewModel:</p>
+		<pre>{
+    "address": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+    "balance": 0,
+    "importance": 0.0,
+    "label": "private Label",
+    "publicKey": null,
+    "harvestedBlocks": 0,
+    "status": "LOCKED"
+}
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Send-transaction">
+            <h3>Sends a new transaction (i.e., sending XEM, messages, assets).</h3>
+		<pre>/wallet/account/transaction/send</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: TransferSendRequest</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>TransferSendRequest:</p>
+		<pre>{
+	"wallet": "PrivateWallet",
+	"type": _type, 	#50 for multisig or 257 for normal transfer
+	"multisigAccount": "multisigAccount", 	#optional multisig only
+	"account": "AccountAddress",
+	"recipient": "ReceipientAddress",
+	"amount": _amount,
+	"hexMessage": 0,	#1 if Hex message
+	"encrypt": 0, 	#1 for encrypted
+	"message": "My first message",	 #optional, cost fees
+	"hoursDue": 2,
+	"password": "Very Secret Password To The Wallet",
+	"fee": 2000000,	 #min fee
+	"multisigFee": 0
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Sign-multisig-transaction">
+            <h3>Sign and propagate a multisignature transfer</h3>
+		<pre>/wallet/account/signature/send</pre>
+             <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: MultisigSignatureRequest</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>MultisigSignatureRequest:</p>
+		<pre>{
+	"wallet": "PrivateWallet",
+	"password": "Very Secret Password To The Wallet",
+	"account": "cosignatoryAccount",
+	"multisigAddress": "multisigAddress",
+	"innerHash": {
+	"data": dataHash 	#inner transaction hash (You can get it from unconfirmed transactions)
+	},
+	"hoursDue": 2,
+	"fee": 2000000
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Validate-transaction">
+            <h3>Validates a new transaction (i.e., sending XEM, messages, assets)</h3>
+		<p>and provides information on fee and encryption possibility.</p>
+		<pre>/wallet/account/transaction/validate</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: PartialTransferInformationRequest</li>
+	<li>Response: PartialTransferInformationViewModel</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>PartialTransferInformationRequest:</p>
+		<pre>{
+    "recipient": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+    "amount":  10000.0,
+    "message": "My first message",
+    "encrypt": 1,
+}</pre>
+
+	<p>PartialTransferInformationViewModel:</p>
+		<pre>{
+    "fee": 1.0,               # reflects the minimum fee that is required 
+                              # to send the transaction
+    "encryptionSupported" : 1 # indicates whether an encrypted message can be sent
+                              # to the recipient (if provided)
+                              # 0 - encryption is not supported
+                              # 1 - encryption is supported
+}
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+	 <section id="Unlock-account">
+            <h3>Unlock the account on the connected NIS server (start harvesting)</h3>
+		<pre>/wallet/account/unlock</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountWalletRequest</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountWalletRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "wallet" : "Test-Wallet"
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Lock-account">
+            <h3>Lock the account on the connected NIS server (stop harvesting)</h3>
+		<pre>/wallet/account/lock</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountWalletRequest</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountWalletRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "wallet" : "Test-Wallet"
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Activate-delegated-harvesting">
+            <h3>Announces activation of delegated harvesting account to the network (FEE:1)</h3>
+		<pre>/wallet/account/remote/activate</pre>
+         <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: TransferImportanceRequest</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>TransferImportanceRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "wallet" : "Test-Wallet",
+    "password": "Very Secret Password To The Wallet",
+    "hoursDue": "6" // (max: 24)
+}
+</pre>  </section>
+
+				<!--------------------------------->
+
+	<section id="Desactivate-delegated-harvesting">
+            <h3>Announces deactivation of delegated harvesting account to the network (FEE:1)</h3>
+		<pre>/wallet/account/remote/deactivate</pre>
+         <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: TransferImportanceRequest</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>TransferImportanceRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "wallet" : "Test-Wallet",
+    "password": "Very Secret Password To The Wallet",
+    "hoursDue": "6" // (max: 24)
+}
+</pre>  </section>
+
+				<!--------------------------------->
+
+	<section id="Check-unlocked">
+            <h3>Checks if account is unlocked on remote server</h3>
+		<pre>/wallet/account/remote/status</pre>
+           <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountWalletRequest</li>
+	<li>Response: AccountStatusViewModel</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountWalletRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "wallet" : "Test-Wallet"
+}
+</pre>
+
+		<p>AccountStatusViewModel:</p>
+		<pre>{
+    "status" : "UNLOCKED" 	#or LOCKED
+}
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Start-delegated-harvesting">
+            <h3>Unlock the account on a remote NIS server (start delegated harvesting)</h3>
+		<pre>/wallet/account/remote/unlock</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountWalletPasswordRequest</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountWalletPasswordRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "wallet" : "Test-Wallet",
+    "password" : "Very Secret Password To The Wallet"
+}
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+		<section id="Stop-delegated-harvesting">
+            <h3>Lock the account on a remote NIS server (stop delegated harvesting)</h3>
+		<pre>/wallet/account/remote/lock</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountWalletPasswordRequest</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountWalletPasswordRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "wallet" : "Test-Wallet",
+    "password" : "Very Secret Password To The Wallet"
+}
+</pre>
+          </section>
+
+				<!--------------------------------->
+	  
+        </section><!--end of #NCC wallet-->
+
+		<!---/////////////////////////////--->
+
+        <section id="Account">
+          <h2><span class="fa fa-edit"></span> Account</h2>
+          <section id="Account-info">
+            <h3>Gets information about a specified account</h3>
+		<p>Looks-up an account which is known by its address id.</p>
+		<pre>/account/find</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountIdRequest</li>
+	<li>Response: AccountViewModel</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountIdRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2"
+}</pre>
+		<p>AccountViewModel:</p>
+		<pre>{
+    "address": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+    "balance": 0,
+    "importance": 0.0,
+    "label": "private Label",
+    "publicKey": null,
+    "harvestedBlocks": 0,
+    "status": "LOCKED"
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Account-unconfirmed">
+            <h3>Gets information about a specified account and unconfirmed transactions.</h3>
+		<pre>/account/transactions/unconfirmed</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountHashRequest</li>
+	<li>Response: AccountTransactionsPair</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountHashRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "hash": "37ccf321509d58a0d5f7fd48ff4350786abcddddf72d4b5baeae6d3c7f506150"
+}</pre>
+		<p>AccountTransactionsPair:</p>
+		<pre>{
+    "address": "TATHIESMY6QO6XKPCBZFEVVVFVL2UT3ESDHAVGL7",
+    "balance": 50170416240761,
+    "importance": 0.012124950571331367,
+    "label": null,
+    "publicKey": "03c55bd250e56c292ed4c898b0883676313283251d21b6a9099bb989db99d736d2",
+    "transactions": [{                                                                  # collection of [TransferViewModel](viewModel.md#transferviewmodel)
+        "id": "19283746535271819",
+        "hash": "1e9d8feec7206ccc3df254bde2a98372b61eef56ac5d907479bc8cc78aa8d1bd",
+        "sender" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+        "timeStamp" : 1234211,
+        "fee": 1.0,
+        "recipient": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+        "amount":  10000.0,
+        "message": "My first message",
+        "encrypt": 1,
+        "confirmed" : 1,
+        "confirmations" : 1440,
+        "blockHeight" : 80765,
+        "direction": 0 
+    },
+    {
+        "timeStamp": 1408403524000,
+        "amount": 15000000000,
+        "encrypted": 0,
+        "sender": "TDUDEHNJR324TIYOYON5T4Z6ZZSCAAAAFDSG56DC",
+        "fee": 1000000000,
+        "recipient": "TATHIESMY6QO6XKPCBZFEVVVFVL2UT3ESDHAVGL7",
+        "id": 2206077648187190476,
+        "message": "Easy money\n\nParana",
+        "confirmations": 6564,
+        "confirmed": 1,
+        "hash": "1e9d8feec7206ccc3df254bde2a98372b61eef56ac5d907479bc8cc78aa8d1bd",
+    "blockHeight" : 80765,
+        "direction": 1
+    }],
+    "harvestedBlocks": 97,
+    "status": "UNLOCKED"
+    "remoteStatus": "ACTIVATING"
+}</pre>
+
+	<p>possible remoteStatus values:</p>
+	<ul>
+	  <li>REMOTE - shouldn't normally occur, both buttons should be disabled</li>
+	 <li>INACTIVE - "activate" button should be enabled, "start delegated harvesting" - disabled</li>
+	<li>ACTIVATING - "activate" button should be disabled, "start delegated harvesting" - enabled</li>
+	<li>ACTIVE - "Deactivate" button should be enabled, "start delegated harvesting" - enabled</li>
+	<li>DEACTIVATING - "Deactivate" button should be disabled, "start delegated harvesting" - disabled</li>
+	    </ul>
+          </section>
+
+				<!--------------------------------->
+
+         <section id="Account-confirmed">
+            <h3>Gets information about a specified account and confirmed transactions.</h3>
+		<pre>/account/transactions/confirmed</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountTransactionIdRequest</li>
+	<li>Response: AccountTransactionsPair</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountTransactionIdRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "id": 12345		#optional
+}</pre>
+		<p>AccountTransactionsPair:</p>
+		<pre>{
+    "address": "TATHIESMY6QO6XKPCBZFEVVVFVL2UT3ESDHAVGL7",
+    "balance": 50170416240761,
+    "importance": 0.012124950571331367,
+    "label": null,
+    "publicKey": "03c55bd250e56c292ed4c898b0883676313283251d21b6a9099bb989db99d736d2",
+    "transactions": [{                                                                  # collection of [TransferViewModel](viewModel.md#transferviewmodel)
+        "id": "19283746535271819",
+        "hash": "1e9d8feec7206ccc3df254bde2a98372b61eef56ac5d907479bc8cc78aa8d1bd",
+        "sender" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+        "timeStamp" : 1234211,
+        "fee": 1.0,
+        "recipient": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+        "amount":  10000.0,
+        "message": "My first message",
+        "encrypt": 1,
+        "confirmed" : 1,
+        "confirmations" : 1440,
+        "blockHeight" : 80765,
+        "direction": 0 
+    },
+    {
+        "timeStamp": 1408403524000,
+        "amount": 15000000000,
+        "encrypted": 0,
+        "sender": "TDUDEHNJR324TIYOYON5T4Z6ZZSCAAAAFDSG56DC",
+        "fee": 1000000000,
+        "recipient": "TATHIESMY6QO6XKPCBZFEVVVFVL2UT3ESDHAVGL7",
+        "id": 2206077648187190476,
+        "message": "Easy money\n\nParana",
+        "confirmations": 6564,
+        "confirmed": 1,
+        "hash": "1e9d8feec7206ccc3df254bde2a98372b61eef56ac5d907479bc8cc78aa8d1bd",
+    "blockHeight" : 80765,
+        "direction": 1
+    }],
+    "harvestedBlocks": 97,
+    "status": "UNLOCKED"
+    "remoteStatus": "ACTIVATING"
+}</pre>
+
+	<p>possible remoteStatus values:</p>
+	<ul>
+	  <li>REMOTE - shouldn't normally occur, both buttons should be disabled</li>
+	 <li>INACTIVE - "activate" button should be enabled, "start delegated harvesting" - disabled</li>
+	<li>ACTIVATING - "activate" button should be disabled, "start delegated harvesting" - enabled</li>
+	<li>ACTIVE - "Deactivate" button should be enabled, "start delegated harvesting" - enabled</li>
+	<li>DEACTIVATING - "Deactivate" button should be disabled, "start delegated harvesting" - disabled</li>
+	    </ul>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Account-incoming">
+            <h3>Gets information about a specified account and incoming transactions.</h3>
+		<pre>/account/transactions/incoming</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountTransactionIdRequest</li>
+	<li>Response: AccountTransactionsPair</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountTransactionIdRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "id": 12345		#optional
+}</pre>
+		<p>AccountTransactionsPair:</p>
+		<pre>{
+    "address": "TATHIESMY6QO6XKPCBZFEVVVFVL2UT3ESDHAVGL7",
+    "balance": 50170416240761,
+    "importance": 0.012124950571331367,
+    "label": null,
+    "publicKey": "03c55bd250e56c292ed4c898b0883676313283251d21b6a9099bb989db99d736d2",
+    "transactions": [{                                                                  # collection of [TransferViewModel](viewModel.md#transferviewmodel)
+        "id": "19283746535271819",
+        "hash": "1e9d8feec7206ccc3df254bde2a98372b61eef56ac5d907479bc8cc78aa8d1bd",
+        "sender" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+        "timeStamp" : 1234211,
+        "fee": 1.0,
+        "recipient": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+        "amount":  10000.0,
+        "message": "My first message",
+        "encrypt": 1,
+        "confirmed" : 1,
+        "confirmations" : 1440,
+        "blockHeight" : 80765,
+        "direction": 0 
+    },
+    {
+        "timeStamp": 1408403524000,
+        "amount": 15000000000,
+        "encrypted": 0,
+        "sender": "TDUDEHNJR324TIYOYON5T4Z6ZZSCAAAAFDSG56DC",
+        "fee": 1000000000,
+        "recipient": "TATHIESMY6QO6XKPCBZFEVVVFVL2UT3ESDHAVGL7",
+        "id": 2206077648187190476,
+        "message": "Easy money\n\nParana",
+        "confirmations": 6564,
+        "confirmed": 1,
+        "hash": "1e9d8feec7206ccc3df254bde2a98372b61eef56ac5d907479bc8cc78aa8d1bd",
+    "blockHeight" : 80765,
+        "direction": 1
+    }],
+    "harvestedBlocks": 97,
+    "status": "UNLOCKED"
+    "remoteStatus": "ACTIVATING"
+}</pre>
+
+	<p>possible remoteStatus values:</p>
+	<ul>
+	  <li>REMOTE - shouldn't normally occur, both buttons should be disabled</li>
+	 <li>INACTIVE - "activate" button should be enabled, "start delegated harvesting" - disabled</li>
+	<li>ACTIVATING - "activate" button should be disabled, "start delegated harvesting" - enabled</li>
+	<li>ACTIVE - "Deactivate" button should be enabled, "start delegated harvesting" - enabled</li>
+	<li>DEACTIVATING - "Deactivate" button should be disabled, "start delegated harvesting" - disabled</li>
+	    </ul>
+          </section>
+
+				<!--------------------------------->
+
+	 <section id="Account-outgoing">
+            <h3>Gets information about a specified account and outgoing transactions.</h3>
+		<pre>/account/transactions/outgoing</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountTransactionIdRequest</li>
+	<li>Response: AccountTransactionsPair</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountTransactionIdRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "id": 12345		#optional
+}</pre>
+		<p>AccountTransactionsPair:</p>
+		<pre>{
+    "address": "TATHIESMY6QO6XKPCBZFEVVVFVL2UT3ESDHAVGL7",
+    "balance": 50170416240761,
+    "importance": 0.012124950571331367,
+    "label": null,
+    "publicKey": "03c55bd250e56c292ed4c898b0883676313283251d21b6a9099bb989db99d736d2",
+    "transactions": [{                                                                  # collection of [TransferViewModel](viewModel.md#transferviewmodel)
+        "id": "19283746535271819",
+        "hash": "1e9d8feec7206ccc3df254bde2a98372b61eef56ac5d907479bc8cc78aa8d1bd",
+        "sender" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+        "timeStamp" : 1234211,
+        "fee": 1.0,
+        "recipient": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+        "amount":  10000.0,
+        "message": "My first message",
+        "encrypt": 1,
+        "confirmed" : 1,
+        "confirmations" : 1440,
+        "blockHeight" : 80765,
+        "direction": 0 
+    },
+    {
+        "timeStamp": 1408403524000,
+        "amount": 15000000000,
+        "encrypted": 0,
+        "sender": "TDUDEHNJR324TIYOYON5T4Z6ZZSCAAAAFDSG56DC",
+        "fee": 1000000000,
+        "recipient": "TATHIESMY6QO6XKPCBZFEVVVFVL2UT3ESDHAVGL7",
+        "id": 2206077648187190476,
+        "message": "Easy money\n\nParana",
+        "confirmations": 6564,
+        "confirmed": 1,
+        "hash": "1e9d8feec7206ccc3df254bde2a98372b61eef56ac5d907479bc8cc78aa8d1bd",
+    "blockHeight" : 80765,
+        "direction": 1
+    }],
+    "harvestedBlocks": 97,
+    "status": "UNLOCKED"
+    "remoteStatus": "ACTIVATING"
+}</pre>
+
+	<p>possible remoteStatus values:</p>
+	<ul>
+	  <li>REMOTE - shouldn't normally occur, both buttons should be disabled</li>
+	 <li>INACTIVE - "activate" button should be enabled, "start delegated harvesting" - disabled</li>
+	<li>ACTIVATING - "activate" button should be disabled, "start delegated harvesting" - enabled</li>
+	<li>ACTIVE - "Deactivate" button should be enabled, "start delegated harvesting" - enabled</li>
+	<li>DEACTIVATING - "Deactivate" button should be disabled, "start delegated harvesting" - disabled</li>
+	    </ul>
+          </section>
+
+				<!--------------------------------->
+
+	 <section id="Account-all-transactions">
+            <h3>Gets information about a specified account and incoming and outgoing transactions.</h3>
+		<pre>/account/transactions/all</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountTransactionIdRequest</li>
+	<li>Response: TransferViewModel</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountTransactionIdRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "id": 12345  	#optional
+}
+</pre>
+
+		<p>TransferViewModel:</p>
+		<pre>{
+    "id": "19283746535271819",
+    "hash": "1e9d8feec7206ccc3df254bde2a98372b61eef56ac5d907479bc8cc78aa8d1bd", #
+    "sender" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "timeStamp" : 1234211,
+    "fee": 1.0,
+    "recipient": "TBYDNCLNEGESF5EWRFWFJU7RNCPWOOQH5LMRSQ5A",
+    "amount":  10000.0,
+    "message": "My first message",                                              # optional, only if message available
+    "encrypt": 1,                                                               # optional, 1 - encrypted
+                                                                                # 0 - clear text
+    "confirmed" : 1,
+    "confirmations" : 1440,
+    "blockHeight" : 80765,
+    "direction": 0                                                              # 1 - incoming, 
+                                                                                # 2 - outgoing, 
+                                                                                # 3 - self
+}
+</pre>
+          </section>
+
+				<!--------------------------------->
+
+	<section id="Account-harvested-blocks">
+            <h3>Retrieves a list of infos on harvested blocks for an account.</h3>
+		<pre>/account/harvests</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: AccountHashRequest</li>
+	<li>Response: HarvestInfoViewModelList</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>AccountHashRequest:</p>
+		<pre>{
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2",
+    "hash": "37ccf321509d58a0d5f7fd48ff4350786abcddddf72d4b5baeae6d3c7f506150" 	#optional
+}
+</pre>
+	<p>HarvestInfoViewModelList:</p>
+		<pre>{
+    "data": [{
+        "id": "http",
+        "hash": "1e9d8feec7206ccc3df254bde2a98372b61eef56ac5d907479bc8cc78aa8d1bd",
+        "message": "",
+        "timeStamp": 1408700457000,
+        "fee": 10.0,
+        "height" : 17801
+    }]
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+        </section><!--end of #Account-->
+
+	<!--/////////////////////////////////-->
+
+           <section id="Node">
+          <h2><span class="fa fa-edit"></span> Node</h2>
+	<hr>
+	<section id="Boot-node">
+            <h3>Boot the local node</h3>
+		<pre>/node/boot</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: BootNodeRequest</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>BootNodeRequest:</p>
+		<pre>{
+    "nodeName": "Arthur",
+    "wallet": "PrivateWallet",
+    "account" : "TCN33UYH7OREBBFPA4D7GAE6TALNAZJOF6ZPDVA2"
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="Check-local-node">
+            <h3>Check the status of a local node</h3>
+		<pre>/node/status</pre>
+            <ul>
+	  <li>Request Method: GET</li>
+	 <li>Request: -</li>
+	<li>Response: NemRequestResult</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>NemRequestResult:</p>
+		<pre>{
+    "code": 3,            # 0 - UNKNOWN
+                          # 1 - STOPPED
+                          # 2 - STARTING
+                          # 3 - RUNNING
+                          # 4 - BOOTING
+                          # 5 - BOOTED
+                          # 6 - SYNCHRONIZED
+    "type": 4,            # A NemRequestResult can have serveral meanings. 
+                          # The type indicates the meaning. 
+                          # type 4 - TYPE_STATUS, the code and the message fields 
+                          # have to be interpreted as status.
+    "message": "status"
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+        </section><!--end of #Node-->
+
+	<!--/////////////////////////////////-->
+
+        <section id="Network">
+          <h2><span class="fa fa-edit"></span> Network</h2>
+	<hr>
+	<section id="Peer-peers">
+            <h3>Requests a view model for the peers to which the specified peers are connected.</h3>
+		<pre>/network</pre>
+            <ul>
+	  <li>Request Method: POST</li>
+	 <li>Request: NodeEndpointList</li>
+	<li>Response: GraphViewModel</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>NodeEndpointList:</p>
+		<pre>{
+    "data": [{
+        "protocol": "http",
+        "host": "bob.nem.ninja",
+        "port": 7890
+    },
+    {
+        "protocol": "http",
+        "host": "alice.nem.ninja",
+        "port": 7890
+    }]
+}</pre>
+
+		<p>GraphViewModel:</p>
+		<pre>{
+    "meta": {
+        "meta": [{
+            "endpoint": {
+                "protocol": "http",
+                "port": 7890,
+                "host": "85.94.111.196"
+            },
+            "address": "TCJQPPB7ESZJWHILWBFG5TJRWXWJD6MZUGO6XA7S",
+            "active": 1,
+            "version": "0.4.3-BETA",
+            "platform": "Oracle Corporation (1.8.0_11) on Windows 8.1"
+        },
+        {
+            "endpoint": {
+                "protocol": "http",
+                "port": 7890,
+                "host": "199.217.112.135"
+            },
+            "address": "TCAGZZKJXE43NNWBMB23ODTANMALICE4XDOEAWXB",
+            "active": 1,
+            "version": "0.4.3-BETA",
+            "platform": "?"
+        }]
+    },
+    "graph": {
+        "nodes": [{
+            "id": "TCJQPPB7ESZJWHILWBFG5TJRWXWJD6MZUGO6XA7S",
+            "label": "pole"
+        },
+        {
+            "id": "TCAGZZKJXE43NNWBMB23ODTANMALICE4XDOEAWXB",
+            "label": "Hi, I am Alice4"
+        }],
+        "edges": [{
+            "id": "TBGIMREUQQ5ZQX6C3IGLBSVPMROHCMPEIHY4GV2L -> TB6TEQCWJUSANWAAFRGKTQKMOGOB6G2ZH7OMKOGO",
+            "source": "TBGIMREUQQ5ZQX6C3IGLBSVPMROHCMPEIHY4GV2L",
+            "target": "TB6TEQCWJUSANWAAFRGKTQKMOGOB6G2ZH7OMKOGO"
+        },
+        {
+            "id": "TBGIMREUQQ5ZQX6C3IGLBSVPMROHCMPEIHY4GV2L -> TCBMYGMLALICE2FITJVBJDEC2SNSPLYDMDM4WL5W",
+            "source": "TBGIMREUQQ5ZQX6C3IGLBSVPMROHCMPEIHY4GV2L",
+            "target": "TCBMYGMLALICE2FITJVBJDEC2SNSPLYDMDM4WL5W"
+        }]
+    }
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+          <section id="NIS-peers">
+            <h3>Requests a view model for the peers to which the local NIS is connected.</h3>
+		<pre>/network/local</pre>
+            <ul>
+	  <li>Request Method: GET</li>
+	 <li>Request: -</li>
+	<li>Response: GraphViewModel</li>
+	<li>Dependent from NIS: Yes</li>
+	    </ul>
+		<p>GraphViewModel:</p>
+		<pre>{
+    "meta": {
+        "meta": [{
+            "endpoint": {
+                "protocol": "http",
+                "port": 7890,
+                "host": "85.94.111.196"
+            },
+            "address": "TCJQPPB7ESZJWHILWBFG5TJRWXWJD6MZUGO6XA7S",
+            "active": 1,
+            "version": "0.4.3-BETA",
+            "platform": "Oracle Corporation (1.8.0_11) on Windows 8.1"
+        },
+        {
+            "endpoint": {
+                "protocol": "http",
+                "port": 7890,
+                "host": "199.217.112.135"
+            },
+            "address": "TCAGZZKJXE43NNWBMB23ODTANMALICE4XDOEAWXB",
+            "active": 1,
+            "version": "0.4.3-BETA",
+            "platform": "?"
+        }]
+    },
+    "graph": {
+        "nodes": [{
+            "id": "TCJQPPB7ESZJWHILWBFG5TJRWXWJD6MZUGO6XA7S",
+            "label": "pole"
+        },
+        {
+            "id": "TCAGZZKJXE43NNWBMB23ODTANMALICE4XDOEAWXB",
+            "label": "Hi, I am Alice4"
+        }],
+        "edges": [{
+            "id": "TBGIMREUQQ5ZQX6C3IGLBSVPMROHCMPEIHY4GV2L -> TB6TEQCWJUSANWAAFRGKTQKMOGOB6G2ZH7OMKOGO",
+            "source": "TBGIMREUQQ5ZQX6C3IGLBSVPMROHCMPEIHY4GV2L",
+            "target": "TB6TEQCWJUSANWAAFRGKTQKMOGOB6G2ZH7OMKOGO"
+        },
+        {
+            "id": "TBGIMREUQQ5ZQX6C3IGLBSVPMROHCMPEIHY4GV2L -> TCBMYGMLALICE2FITJVBJDEC2SNSPLYDMDM4WL5W",
+            "source": "TBGIMREUQQ5ZQX6C3IGLBSVPMROHCMPEIHY4GV2L",
+            "target": "TCBMYGMLALICE2FITJVBJDEC2SNSPLYDMDM4WL5W"
+        }]
+    }
+}</pre>
+          </section>
+
+				<!--------------------------------->
+
+        </section><!--end of #Network-->
+
+	<!--/////////////////////////////////-->
+        
+        <section id="Shutdown">
+          <h2><span class="fa fa-edit"></span> Shutdown</h2>
+          <h3>Stops the NCC server</h3>
+		<p>After that NCC GUI does not respond to any clicks.</p>
+		<pre>/shutdown</pre>
+            <ul>
+	  <li>Request Method: GET</li>
+	 <li>Request: -</li>
+	<li>Response: -</li>
+	<li>Dependent from NIS: No</li>
+	    </ul>
+        </section><!--end of #Shutdown-->
+
+	<!--/////////////////////////////////-->
+
+	<hr>	
+
+      </div>
+
+    
+    </div><!--end of .row-->
+  </div><!--end of .container-->
+  
+</body>
+
+
+	<script type='text/javascript' src="js/jquery.min.js"></script>
+       <script type='text/javascript' src="js/bootstrap.min.js"></script>
+        
+        <script>
+    $('#nav').affix({
+    offset: {     
+      top: $('#nav').offset().top,
+      bottom: ($('footer').outerHeight(true) + $('.application').outerHeight(true)) + 40
+    }
+});
+    </script>
+
+        
+</html>
