@@ -429,7 +429,7 @@
                         <li><a id="footerresources2" href="http://www.altnemo.com/"></a></li>
                         <li><a id="footerresources3"  href="https://docs.google.com/spreadsheet/ccc?key=0Ak91SD0veCeddDdmTkdaWV8zbHp2dWlodDVEVUItbXc&usp=sharing&richtext=true#gid=10"></a></li>
                         <li><a id="footerresources4" href="http://bob.nem.ninja/docs/"></a></li>
-                        <li><a id="footerresources5" href="https://github.com/NewEconomyMovement/NemCommunityClient/blob/master/docs/api.md"></a></li>
+                        <li><a id="footerresources5" href="http://nem.io/ncc/index.html"></a></li>
                         <li><a id="footerresources6" href="http://www.8btc.com"></a></li>
                      </ul>
                   </div>
