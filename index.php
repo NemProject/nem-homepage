@@ -54,6 +54,11 @@
         ga('create', 'UA-60356672-1', 'auto');
         ga('send', 'pageview');
       </script>
+      <style>
+        .otherXchangeWrap{
+          margin-left: 17%;
+        }
+      </style>
    </head>
    <body>
       <div class="warning alert" id ="headerIE"></div>
