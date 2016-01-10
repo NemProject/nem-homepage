@@ -1,0 +1,27 @@
+{
+  "name": "bower.json",
+  "homepage": "https://github.com/NewEconomyMovement/nem-homepage",
+  "authors": [
+    "saulgray <saulgrayer@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gumby-images": "~1.1.1",
+    "gumby-inview": "~1.0.3",
+    "gumby-parallax": "~1.2.0",
+    "gumby-shuffle": "~1.1.0",
+    "gumby": "git://github.com/GumbyFramework/Gumby.git#~2.6.3",
+    "i18next": "~1.7.5"
+  }
+}

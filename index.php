@@ -305,9 +305,9 @@
 <div class="inside">
 <a href="https://bittrex.com/Market/Index?MarketName=BTC-XEM"><img height="20px" src="img/bittrexSat.png" alt="bittrex cryptocurrency exchange"/></a>
 </div>
-<div class="inside inside2">
+<!-- <div class="inside inside2">
 <a href="https://coingateway.net/"><img src="img/coingateway.png" alt="coingateway exchange"/></a>
-</div>
+</div> -->
 <div class="inside">
 <a href="http://btc38.com/trade.html?mk_type=btc&btc38_trade_coin_name=xem"><img height="16px" src="img/btc38Sat.png" alt="btc38 cryptocurrency exchange"/></a>
 </div>
