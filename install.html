@@ -53,6 +53,9 @@
         color: #41bf76;
         font-weight: 400;
       }
+      span{
+        color: #41bf76;
+      }
       </style>
    </head>
    <body>
@@ -112,72 +115,22 @@
       <div id="install">
       <div class="parallax parallax4" gumby-parallax=".7">
 
-         <div class="row installer">
-            <h2>Installers</h2>
-            <div class="eight columns centered">
-               <div class="six columns borderClient">
-                  <div class="clientLarge" id="windowsInstall"></div>
-               </div>
-               <div class="six columns borderClient">
-                  <div class="clientLarge" id="macInstall"></div>
-               </div>
-            </div>
-         </div>
-        <hr>
-        <br><br>
-        <div class="row installer">
-        <h3>Lightweight Client</h3>
-           <div class="eight columns centered">
-              <div class="makeGreen six columns borderClient">
-                <a href="http://download.nem.io/lightwallet-standalone-1.1b-cdn-nginx1.8.zip">
-                  <img src="img/nginx.png" />
-                  <h4  class="makeGreen">Lightweight (nginx)</h4>
-              </a>
-              <a href="http://download.nem.io/lightwallet-standalone-1.1b-cdn-nginx1.8.zip.sig">
-                <h5 class="makeGreen">Lightweight Signature (nginx)</h5>
-              </a>
-              </div>
-              <div class="six columns borderClient">
-                <a href="http://download.nem.io/lightwallet-standalone-1.1b-cdn-pytornado.zip">
-                <img src="img/tornado.jpg" />
-                <h4 class="makeGreen">Lightweight (tornado)</h4>
-              </a>
-              <a href="http://download.nem.io/lightwallet-standalone-1.1b-cdn-pytornado.zip.sig">
-                <h5 class="makeGreen">Lightweight Signature (tornado)</h5>
-              </a>
-              </div>
-           </div>
-        </div>
-        <hr>
+
         <br><br>
          <div class="row installer">
-            <h3>Standalone Client</h3>
-            <h5>For 32/64 Linux, 32-bit Windows, and 32-bit Mac</h5>
-            <div class="eight columns centered borderClient">
-               <div class="six columns">
-                  <div class="clientMed" id="tgzClient"></div>
-                  <div class="sigSmall" id="tgzSig"></div>
-               </div>
-               <div class="six columns">
-                  <div  class="clientMed" id="zipClient"></div>
-                  <div class="sigSmall" id="zipSig"></div>
-               </div>
-            </div>
-         </div>
-        <hr>
-        <br><br>
-         <div class="row installer">
-            <h5>Backup Client Resource</h5>
+            <h5>Temporary Client Resources</h5>
             <div class="five columns centered borderClient">
                <p>
-                  If you are having issues downloading from the links above, download them directly from our download page at <a href="http://download.nem.io/installer/">download.nem.io</a>
+                  Due to some difficulties with google, all links are disabled. You will have to copy and paste this link to get to our downloads:
                </p>
+               <p><span>download.nem.io/installer/</span></p>
                <p>
                   OR
                </p>
                <p>
-                  Download them directly from our sister-site at <a href="http://bob.nem.ninja/installer/">bob.nem.ninja</a>
+                  <span>bob.nem.ninja</span>
                </p>
+               <p> We are working to resolve the issue, and apologize for any inconvenience.</p>
             </div>
          </div>
          <br><br>
@@ -308,22 +261,7 @@
       <script src="bower_components/gumby/js/main.js"></script>
 
       <!-- put version number in download links -->
-      <script>
 
-         function callback(data) {
-            // console.log(data);
-            // alert(data.testing);
-            link = "<a href=\"http://download.nem.io/";
-            document.getElementById("windowsInstall").innerHTML=link+"installer/nemwallet-"+data.stable+"-windows-installer.exe\"><img src=\"img/windows.png\"/><br><br>Windows Installer</a>";
-            document.getElementById("macInstall").innerHTML=link+"installer/nemwallet-"+data.stable+"-osx-installer.app.tgz\"><img src=\"img/mac.png\"/><br><br>Mac Installer</a>";
-            document.getElementById("tgzClient").innerHTML=link+"nis-ncc-"+data.stable+".tgz\">NIS/NCC Standalone (.tgz)</a>";
-            document.getElementById("tgzSig").innerHTML=link+"nis-ncc-"+data.stable+".tgz.sig\">NIS/NCC Signature (.tgz)</a>";
-            document.getElementById("zipClient").innerHTML=link+"nis-ncc-"+data.stable+".zip\">NIS/NCC Standalone (.zip)</a>";
-            document.getElementById("zipSig").innerHTML=link+"nis-ncc-"+data.stable+".zip.sig\">NIS/NCC Signature (.zip)</a>";
-          }
-      </script>
-      <!-- get client version number from download.nem.io -->
-      <script src="http://download.nem.io/version_p.js"></script>
 
       <script>
          //   function wfs() {
