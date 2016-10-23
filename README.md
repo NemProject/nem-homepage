@@ -1,4 +1,4 @@
 NEM homepage
 ===============
 
-Source for nem.io. Let's build an amazing information source for NEM!
+DISCONTINUED, new website here: https://github.com/NemProject/nem-website
