@@ -1,0 +1,274 @@
+{
+   "READ-Translators": "Directly below are different links for this site, change the links only if you can find a better alternative in the language you are translating to, and you are familiar with basic HTML. Anything that starts with 'READ' is a message to the translators, and it does not need to be translated.",
+
+   "a": {
+      "i": "<i class=\"icon-down-open-big\"></i>",
+      "1": "<a href=\"faq.html#strong-passContent\">",
+      "3": "<a href=\"Em breve.html\">",
+      "5": "<a href=\"#OS-supportContent\">",
+      "6": "<a href=\"#how-harvestContent\">",
+      "ieBitVer": "<a href=\"http://answers.microsoft.com/en-us/ie/forum/ie8-windows_other/version-of-ie-32-bit-or-64-bit-how-can-i-tell/75488de3-fffa-4782-be0a-c536c9a70151\">",
+      "javaCheck": "<a href=\"https://www.java.com/en/download/installed.jsp\">",
+      "javaWindowsM": "<a href=\"http://www.wikihow.com/Install-Java-on-Windows-8\">",
+      "javaMacM": "<a href=\"https://www.java.com/en/download/help/mac_install.xml\">",
+      "nemNinja": "<a href=\"http://bob.nem.ninja/\">bob.nem.ninja</a>",
+      "bobNemNinja": "<a href=\"http://bob.nem.ninja/\">",
+      "nemNinjaInstaller": "<a href=\"http://bob.nem.ninja/installer/\">bob.nem.ninja/installer</a>",
+      "nemWindowsTut": "<a href=\"https://gist.github.com/crackerhead/50bc8fb2c3ad629521b7\">",
+      "nemMacTut": "<a href=\"https://gist.github.com/crackerhead/408d0326d8be94a29cdf\">",
+      "nemLinuxTut": "<a href=\"https://gist.github.com/crackerhead/312b54f42855cbf3bb15\">",
+      "portGuide": "<a href=\"https://gist.github.com/crackerhead/e0354e87adcdfb939cb0\">",
+      "exchangeGuide": "<a href=\"\">",
+      "rasPi": "<a href=\"http://www.raspberrypi.org/products/raspberry-pi-2-model-b/\">",
+      "vultr": "<a href=\"https://www.vultr.com/pricing/\">",
+      "nuc": "<a href=\"http://www.intel.com/content/www/us/en/nuc/overview.html\">",
+      "liva": "<a href=\"http://www.newegg.com/Product/Product.aspx?Item=N82E16856501007&cm_re=mini_computer-_-56-501-007-_-Product\">",
+      "foxconn": "<a href=\"http://www.newegg.com/Product/Product.aspx?Item=N82E16856119080&cm_re=mini_pc-_-56-119-080-_-Product\">",
+      "noIp": "<a href=\"http://no-ip.com\">",
+      "noIpWin": "<a href=\"http://www.noip.com/download?page=win\">",
+      "noIpMac": "<a href=\"http://www.noip.com/download?page=mac\">",
+      "noIpLinux": "<a href=\"http://www.noip.com/download?page=linux\">",
+      "noIpConfig": "<a href=\"http://www.noip.com/support/knowledgebase/installing-the-windows-4-x-dynamic-update-client-duc/\">",
+      "easyConfig": "<a href=\"https://gist.github.com/crackerhead/e0354e87adcdfb939cb0\">",
+      "multiConfig": "<a href=\"https://gist.github.com/crackerhead/ac285e846a183094db3b\">",
+      "nccSource": "<a href=\"https://github.com/NewEconomyMovement/NemCommunityClient\">Github</a>",
+      "nisApi": "<a href=\"http://bob.nem.ninja/docs/\">NIS API</a>"
+   },
+   "READ-Translators2": "Anything that is closed in brackets, such as '</a>', '<>', '</span>' below this message, should NOT be translated. For example, if you were translating this sentence, do not translate '<span>', but still translate the bold <span>TEXT INSIDE THESE TWO SPAN TAGS</span>",
+   "READ-Translators3": "Do not translate anything that starts with '$', looks like this '$t(a.1)' or this '$t(s.java)'",
+
+   "app": {
+      "now": "CONSIGA XEM AQUI",
+      "coming": "Em breve",
+      "tut": "tutorial",
+      "ninth": "9",
+      "eighth": "8",
+      "seventh": "7",
+      "sixth": "6",
+      "fifth": "5"
+   },
+   "nav":{
+      "client": "CLIENTE",
+      "buy": "COMPRE XEM",
+      "blog": "BLOG",
+      "faq": "FAQ's",
+      "tech": "<span>DESENVOLVEDOR $t(a.i)</span>",
+      "update": "ATUALIZAÇÕES",
+      "lang": "<span>PORTUGUÊS $t(a.i)</span>",
+      "READ-Translators4": "lang output should be the name of the translated language"
+   },
+   "clients":{
+      "header1": "NEM Community Client",
+      "about1": "Abra o cliente NEM Beta em seu navegador de internet, em um processo de dois passos.",
+      "click1": "INSTALAR NEM COMMUNITY CLIENT",
+      "help1": "Precisa de ajuda com a instalação do cliente Nem? $t(a.1) <span>Siga nosso guia</span></a>",
+
+      "header2": "Cliente NEM simplificado para celulares",
+      "about2": "Instale o Cliente NEM para celulares. ele possui todos os principais recursos do cliente Nem para computadores, objetivando a facilidade de uso.",
+      "click2": "EM BREVE"
+   },
+   "buy":{
+      "header": "Como conseguir Xem?",
+      "box1": "XEM estará disponível na casa de trocas BITTREX pouco após seu lançamento",
+      "box1click": "$t(app.coming)",
+      "box2": "XEM estará disponível na casa de trocas POLONIEX logo após seu lançamento",
+      "box2click": "$t(app.coming)",
+      "box3": "Compre XEM diretamente com dinheiro",
+      "box3click": "$t(app.coming)",
+      "help": "Necessita de ajuda na aquisição de XEM? $t(a.3) <span> Aprenda mais aqui</span></a>",
+      "help2": "Necessita de ajuda na aquisição de XEM? $t(a.3) <span><br>Aprenda mais aqui</span></a>"
+   },
+   "footer":{
+      "logotext": "NEM é um movimento para criar uma nova economia baseada nos princípios de descentralizaçao, liberdade financeira e igualdade de oportunidade.",
+
+      "resources": "Recursos",
+      "resources1": "NEM no Github",
+      "resources2": "NEM venda para os acionistas",
+      "resources3": "Lista final dos acionistas ",
+      "resources4": "NIS API",
+      "resources5": "NCC API",
+      "resources6": "",
+
+      "articles": "Artigos",
+      "articles1": "NEM em Vice",
+      "articles2": "NEM em Yahoo Finance",
+      "articles3": "NEM em Cointelegraph",
+      "articles4": "",
+      "articles5": "",
+      "articles6": "",
+
+      "newsletters": "Boletim informativo",
+      "newsletters1": "Boletim informativo $t(app.ninth)",
+      "newsletters2": "Boletim informativo $t(app.eighth)",
+      "newsletters3": "Boletim informativo $t(app.seventh)",
+      "newsletters4": "Boletim informativo $t(app.sixth)",
+      "newsletters5": "Boletim informativo $t(app.fifth)",
+      "newsletters6": "Arquivos"
+   },
+   "faqs":{
+      "headerFaqs": "FAQs",
+
+      "nav":{
+         "gen-question": "Questões gerais",
+         "nem-crypto": "NEM é uma criptomoeda?",
+         "why-nem": "Por que eu deveria utilizar Nem enquanto temos o Bitcoin?",
+         "use-nem": "O que eu posso fazer com NEM?",
+         "whats-xem": "o que é XEM?",
+         "loyalty-points": "O cartão de crédito dá pontos de fidelidade. Nem faz o mesmo?",
+
+         "get-started": "Iniciando",
+         "OS-support": "Quais sistemas operacionais são suportados?",
+         "browser-bit": "Como eu consigo checar os bits da versão do meu navegador de internet?",
+         "install-java": "como eu posso instalar Java?",
+         "get-wallet": "Como eu consigo uma carteira NEM?",
+         "strong-pass": "Qual é a sua versão de uma senha forte?",
+         "install-nem": "Como eu instalo o software do cliente Nem?",
+         "get-xem": "Como eu consigo alguns XEMs?",
+         "ncc-nis": "O que é NCC e o que é NIS?",
+         "nis-or-ncc": "Quais são os mínimos requerimentos para rodar somente o NIS OU o NCC?",
+         "nis-and-ncc": "Quais são os mínimos requerimentos para para rodar o cliente NIS E o NCC simultaneamente?",
+         "run-node": "Como eu consigo rodar um servidor (NIS)?",
+         "mobile-wallet": "Tem o aplicativo da carteira para celulares?",
+         "install-help": "Eu não consigo instalar NEM no meu computador. Aonde eu consigo ajuda?",
+
+         "tech-basic": "Basico sobre tecnologia",
+         "whats-poi": "O que é esse \"POI\"?",
+         "multisig": "O que é conta do tipo Multi-Usuario, e como elas fucionam?",
+         "whats-harvest": "O que é colheita?",
+         "how-harvest": "Como eu consigo colheitar?",
+         "open-port": "Como eu consigo abrir a porta 7890?",
+
+         "deep-question": "Questões mais profundas",
+         "xem-exist": "Quantos XEM estão em circulação?",
+         "community-fund": "O que é o  \"fundo da comunidade NEM\"?",
+         "nem-distribution": "Como a Nem foi distribuida inicialmente?",
+         "issue-coins": "Eu quero emitir as minhas próprias moedas de modo a realizar as minhas próprias coisas. Eu posso utilizar NEM?",
+         "nem-indepth": "Onde eu consigo informaçao mais profunda sobre o NEM?"
+      },
+
+      "nem-cryptoContent": "NEM não é somente uma criptomoeda. Acima disso, e mais importante, NEM é uma plataforma peer to peer e providencia / providenciará serviços como pagamentos, mensagens, troca de ativos e smart contracts. Haverá muito mais quando NEM se tornar uma solução ainda mais evoluida.",
+
+      "why-nemContent": "Bitcoin é uma criptomoeda assim como muitas outras ciptomoedas que existem. Algumas são de aplicação específicas, enquanto algumas são puramente criptomoedas. Muito longe de ser somente mais uma criptomoeda, NEM é uma plataforma de soluções. Há muito mais a oferecer como uma plataforma. Como uma criptomoeda, Nem não necessita de muito poder computacional energia para rodar um servidor. NEM também prega a baixas barreras para novos entrantes através da prova de importância (POI), ao invés dos métodos tradicionais, que requerem muito poder computacional, assim como muita energiapara poder realizar a mineração. NEM chama esse ato de Colheita. em adição, também é utilizado outra solução chamada Eigentrust ++ para validar e peneirar os péssimos atores na rede Nem de servidores. Como uma solução em evolução, NEM está se preparando para achegada de novos recursos. Mas no estágio inicial, Nem oferta esses recursos:",
+      "why-nem-1": "Primeiro block chain baseado em uma solução multisig",
+      "why-nem-2": "Uma solução de mensagem criptografada",
+      "why-nem-3": "Colheita: Uma vez que a colheita foi iniciada, você não precisa que sua carteira fique aberta para poder colheitar. A colheita pode ser fechada e não é necessário que a carteira esteja aberta online.",
+      "why-nem-4": "Carteira protegida, Exemplo: A carteira não precisa estar online na internet. ela pode estar escondida atrás de um firewall e só se conecta diretamente no NIS da rede de computadores interna onde você está.",
+      "why-nem-5": "A senha e a chave privada NUNCA sairão de sua carteira e a carteira, por sua vez, é protegida por senha.",
+
+      "use-nemContent": "Você pode enviar e receber mensagem e pagamentos de forma muito rápida, segura e a um custo muito baixo e sem a necessidade de uma conta bancária. Você pode comprar/vender/negociar mercadorias ao redor do mundo. No futuro, havera mais características excitantes como a casa de troca de ativos, smart contracts and moedas coloridas - colored coins.",
+
+      "whats-xemContent": "\"XEM\" é o código da moeda NEM. Ele é similar ao Real, USD, EUR, CNY, JPY etc.",
+
+      "loyalty-pointsContent": "Os pontos de fidelidade da NEM vem em forma de colheita. Há, na realidade, recompensas por usar NEM como uma plataforma para realizar suas transações. Quanto mais transações você negociar e quanto maior o seu balanço , mais frequentemente você será recompensado. As recompensas são aleatórias. As vezes você consegue mais e as vezes você consegue menos, dependendo do bloco que você colheitar.",
+
+      "OS-supportContent": "Com o Java runtime x64 é possível rodar o cliente NEM em todos os sistemas operacionais que suportam Java como Windows, Mac OSX, e Linux.",
+
+      "bitIntro": "Se você precisar instalar o Java, então o primeiro passo é verificar se o seu navegador browser é x32 ou x64. Nota: Existem diferenças entre ter um navegador x64 e um sistema operacional de x64.",
+      "bitChrome": "No Chrome, digite <span>chrome://chrome</span> na barra de pesquisa, você verá o número da versão, e ao final da linha, você verá se é 32-bit ou 64-bit.",
+      "bitFirefox": "No Firefox, digite <span>about:</span> na barra de endereço da internet. Você verá uma linha que começa com o identificador dos bits da versão. Se nessa linha você ver:  x86_64, então você está utilizando uma versão de x64 do navegador. Se você ver i686, você está utilizando uma versão de x32 do navegador. Se você estiver utilizando Windows, então você estará utilizando uma versão de x32 do Firefox. Atualmente, a versão x64 do Firefox está em testes",
+      "bitOpera": "No Opera , digite <span>opera:about</span> na barra de endereços. Você verá x86_64 se for x64; ou i686 se for x32",
+      "bitIE": "No Internet Explorer, é difícil localizar a versão que você está usando, você pode encontrar algumas pistas $t(a.ieBitVer) AQUI</a>, se houver algum problema, use algum dos navegadores mencionados acima.",
+
+      "javaHeader": "Instalando Java",
+      "javaText": "Verifique sua versão java $t(a.javaCheck)AQUI</a>. Se você está usando Java Versão 8_25 ou superior, estará pronto para instalar o cliente NEM.<br>Aviso: escolha a versão do java condizente com seu browser, x32 ou x64 bits. Sua CPU ou Versão do sistema não importam. Isto é explicado em $t(a.5) Checando versão do navegador</a>",
+
+      "javaWindowsHead": "Instalando Java - Windows",
+      "javaWindowsVideo": "Veja este video $t(app.tut) explicando como instalar o Java 8 no Windows 8, as instruções são para o Java 7, mas são idêncas às do Java 8. Quando selecionar a versão Java, escolha a versão x32 ou x64 dependendo da versão do seu browser. Você pode $t(a.5)Checar a versão do navegador</a>",
+      "javaWindowsMan": "Veja um guia que ensina como instalar o Java 8 $t(a.javaWindowsM)AQUI</a>",
+
+      "javaMacHead": "Instalando Java - Mac OSX",
+      "javaMacVideo": "Veja este video $t(app.tut) explicando como instalar o Java 8 no Mac OSX. Quando selecionar a versão Java, escolha a versão x32 ou x64 dependendo da versão do seu browser. Você pode $t(a.5)Checar a versão do navegador</a>",
+      "javaMacMan": "Veja as instruções para instalar o Java no site oficial $t(app.tut), também pode ser encontrado $t(a.javaMacM)AQUI</a>",
+
+      "javaLinuxHead": "Instalando Java - Linux",
+      "javaLinuxVideo": "Um ótimo vídeo explicando como instalar o Java 8 no Ubuntu/Mint",
+
+      "get-walletContent": "Baixar o instalador $t(a.nemNinjaInstaller) ou a versão portátil $t(a.nemNinja). Depois da instalação, basta clicar em [Criar Nova Carteira]. (Certifique-se de inserir uma senha segura e da qual irá se lembrar.)",
+      "get-wallet-note": "(Nota: Estes são os sites oficiais que distribuem o programa da carteira NEM. Pode haver outros disponíveis em outros lugares, mas não há prova de que são seguros.)",
+
+      "strong-passContent": "Razoavelmente uma seqüência de mais de 12 caracteres que são escolhidos aleatoriamente, não têm correlação, e possuem letras, números e símbolos deve ser adequado.",
+
+      "install-nem-java": "Java 8 é obrigatório para NEM funcionar, tenha certeza de que ele está instalado no seu PC. Veja as instruções de como instalar na seção de instruções.",
+      "install-nem-1":  "Baixar o instalador para Windows ou MAC $t(a.nemNinjaInstaller) note que ele funciona apenas com o Java 8 x64.",
+      "install-nem-2": "Para instalar:",
+      "install-nem-3": "Baixe e descompacte o arquivo de $t(a.nemNinjaInstaller)",
+      "install-nem-4": "Execute o arquivo extraído e siga as instruções. (No Mac você deve clicar com o direito, ir em instalar arquivo e cilcar em abrir).",
+      "install-nem-alone-1": "Para Java x32, baixe a versão portátil do cliente em $t(a.nemNinja).",
+      "install-nem-alone-2": "Windows: Siga a community-made $t(a.nemWindowsTut)$t(app.tut)</a>.",
+      "install-nem-alone-3": "Mac: Siga a community-made $t(a.nemMacTut)$t(app.tut)</a>.",
+      "install-nem-alone-4": "Linux (Ubuntu): Siga a community-made $t(a.nemLinuxTut)$t(app.tut)</a>.",
+      "install-nem-alone-5": "Para outros clientes obterem acesso ao seu nó, a porta 7890 deve estar aberta através do firewall. Você pode obter as instruções $t(a.portGuide)neste link</a> como fazer isto. Pode também usar este link alternativo \"$t(a.6)Como abrir a porta 7890?</a>\" Questão no FAQ aqui. A porta aberta não é requisito obrigatório.",
+
+      "get-xemContent": "Você pode conseguir XEM em:",
+      "exchange-1": "POLONIEX",
+      "exchange-2": "BITTREX",
+      "exchange-3": "BTC38",
+      "exchange-guide": "Aqui tem um  $t(a.exchangeGuide)$t(app.tut)</a> explicando como comprar XEM ou BTC",
+
+      "nccContent": "NCC significa NEM Community Client. Ele é o cliente NEM, onde ficarão as carteiras, poderá haver outros tipos de cliente, bem como um site.",
+      "nisContent": "NIS significa Network Infrastructure Server. O NIS é o servidor e formará os nós da rede que se comunicam entre si. Ele mantém a estrutura da rede e opera as instruções para confirmar as transações. NIS é um servidor leve e funcional. Qualquer NCC pode usar um NIS para se conectar à rede. Para colher (Veja colheita) pode-se usar a colheita remota ou conectar a um NIS usando o NCC sem que a segurança se prejudique.",
+
+      "nis-or-ncc-mem": "Memória: 768 MB RAM",
+      "nis-or-ncc-cpu": "CPU: 700 MHz",
+      "nis-or-ncc-note": "Note que esses são os requisitos mínimos para NEM.",
+      "nis-or-ncc-mini-pc": "Alguns computadores pequenos que podem suportar NEM:",
+      "nis-or-ncc-mini-pc-1": "$t(a.rasPi)Raspberry Pi 2</a>",
+      "nis-or-ncc-mini-pc-2": "$t(a.vultr)Servidor Vultr $5/mês</a>",
+
+      "nis-and-ncc-mem": "Memória: 2 GB",
+      "nis-and-ncc-cpu": "CPU: 1 GHz",
+      "nis-and-ncc-small-pc": "Alguns Computadores que possuem esas características: ",
+      "nis-and-ncc-small-pc-1": "$t(a.nuc)NUC</a>",
+      "nis-and-ncc-small-pc-2": "$t(a.liva)Liva</a>",
+      "nis-and-ncc-small-pc-3": "$t(a.foxconn)Foxconn</a>",
+
+      "run-node-1": "Baixar, instalar e iniciar o NIS $t(a.bobNemNinja)(NIS)</a>.",
+      "run-node-2": "Para usuários avançados:",
+      "run-node-3": "Se você irá instalar um nó público, é recomendado $t(a.6)abrir a porta 7890</a> em seu roteador/firewall para conexões mais eficientes com os outros nós. Isso é obrigatório também para permitir que NCCs de outros locais na internet possam se conectar ao seu servidor NIS. Par acessar o NIS a partir do seu computador, a porta aberta não é necessária.",
+      "run-node-4": "Qualquer conexão externa com o seu NIS é segura e ele também pode funcionar sem o NCC, o qual é recomendado manter em um local seguro, pois é nele que se encontram as carteiras.",
+
+      "mobile-walletContent": "A carteira móvel está em desenvolvimento e será lançada para iOS e Android em breve.",
+
+      "install-help-1": "Se necessita de ajuda, dê uma olhada em <a href=\"https://github.com/NewEconomyMovement/NemCommunityClient/issues\">issues</a> no github.",
+      "install-help-2": "Leia o nosso Blog (Em Breve)",
+
+      "whats-poiContent": "POI é a abreviatura \"Proof-of-Importance\". É o algorítimo de Consenso da rede. Ele indica a chance de você encontrar um bloco, quanto maior a pontuação, maior a chance. Os blocos contém taxas que ficam com que encontrá-los. A pontuação de importância depende do número de transações que você faz, bem como vários outros fatores. Se você não fazer transações, o POI será baseado em seu saldo apenas (nesse caso, é similar ao proof-of-stake).",
+
+      "multisigContent": "Quando uma conta é convertida para Multisig, transações podem ser feitas pelos consignatários apenas. Isso é muito útil, permite que essas contas sejam controladas por vário usuários, assim como uma conta conjunta em um banco.",
+
+      "whats-harvest-1": "A colheita é um processo pelo qual os nós Irão validar um bloco de dados com hum de hash e colocar no blockchain. Uma vez colocado no blockchain, torna-se um registro imutável e irreversível, a menos que haja um conflito, que no caso, haverá alguma arbitragem automática ea cadeia bloco é reajustado para corrigir-se automaticamente.",
+      "whats-harvest-2": "Esse bloco de dados é um conjunto de operações que ocorrem em um prazo aproximado de cerca de 1 minuto. O processo exige pouco trabalho da máquina. É um processo aleatório que depende de alguns fatores para que apenas uma conta em toda a rede obtenha o bloco.",
+      "whats-harvest-3": "Essa conta receberá todas as taxas que estão no bloco encontrado.",
+
+      "how-harvestContent": "Entre na sua carteira e clique em \"Iniciar colheita\". <br><br>Requirement: a conta deve ter saldo de pelo menos 10,000 XEM adquiridos.",
+
+      "open-port-1": "Para abrir a porta 7890, basta ter familharidade com firewalls. Entre no firewall da sua rede. De acordo com o redirecionamento de portas, abrir a porta 7890 é mapeá-la para o endereço IP onde o NIS está em execução. É preferível que o NIS esteja sendo executado em um endereço IP estático em sua rede. Caso contrário, com as mudanças de endereço, o NCC pode não ser capaz de se conectar com o NIS. Para configurar um endereço estático. é melhor você procurar na internete como criar um endereço estático para o Terminal. Em suma, você terá que atribuir um endereço IP para o adaptador de rede. Precisará de atribuir também um endereço DNS, que é normalmente o endereço IP da LAN interna do seu router.",
+      "open-port-2": "No Windows, execute o cmd e digite o comando <span>ipconfig</span> para obter as configurações de IP.",
+      "open-port-3": "No Mac, abra o terminal e digite <span>ifconfig –a</span>",
+      "open-port-4": "Você verá algo parecido com o sequinte:",
+      "open-port-output-1": "Sufixo DNS específico de Connecção. : Casa",
+      "open-port-output-2": "endereço local IPv6 . . . . . . .  : fc80::4d2f:af58:28ca:a1b6%4",
+      "open-port-output-3": "endereço IPv4. . . . . . . . . . . : 192.168.0.115",
+      "open-port-output-4": "Mascara de sub rede. . . . . . . . : 255.255.255.0",
+      "open-port-output-5": "Gateway padrão . . . . . . . . . . : 192.168.0.1",
+      "open-port-5": "No Windows, prefira usar o IPv4, mapeie ele para a porta 7890 desse IP. No Mac, verá o seu IP listado após digitar <span>inet</span>.",
+      "open-port-6": "No entanto, se você tiver um IP dinâmico do seu provedor de Internet, terá que fazer outras configurações para que possa abrir a porta públicamente. Sugerimos que use um programa para dns dinâmico. Pode encontrá-lo em $t(a.noIp)no-ip.com</a>. Em seguida baixar o $t(a.noIpWin)the DUC</a> para windows (para MAC, por vavor, vá $t(a.noIpMac)AQUI</a>, e para Linux vá $t(a.noIpLinux)AQUI</a>) Instale na máquina onde se encontra o seu NIS, veja como configurar $t(a.noIpConfig)AQUI</a>",
+      "open-port-7": "Seguindo os passos anteriores, será capaz de acessar o NIS de outro lugar da internet.",
+      "open-port-8": "Finalmente, nas configurações do NCC, insira o nome de domínio ou IP no endereço host onde está escrito localhost. inserir algo parecido com <pan>xxx.ddns.net</span>, que é o nome pré-definido no DUC. Se não houver uma definição no roteador que diz loopback no encaminhamento de porta, marque essa opção. Isso permite que os dns dinâmicos deem loop para o NIS sempre que você está chamando <span>xxx.ddns.net</span> de dentro da rede interna.",
+      "open-port-9": "Mais informações e ajuda para configurações podem ser encontradas no fórum oficial:",
+      "open-port-10": "Guia $t(a.easyConfig)de fácil configuração</a>.",
+      "open-port-11": "Guia para $t(a.multiConfig)configurar vários modens</a>.",
+
+      "xem-existContent": "Total de XEM existentes 8,999,999,999.",
+
+      "community-fundContent": "O Fundo Comunitário NEM pode ser usado por qualquer pessoa para fazer quase nada. Existe apenas uma condição: você tem que convencer a comunidade de que sua idéia contribuirá positivamente com o ecossistema NEM. Os detalhes sobre a forma como a nossa votação é feita será anunciada em breve.",
+
+      "nem-distributionContent": "XEM foi 100% criada e distribuída para aprox. 1,500 investidores iniciais.",
+
+      "issue-coinsContent": "A resposta simples é sim. Quando os ativos NEM tornar disponível, você será capaz de emitir suas próprias moedas, enquanto ainda estiver usando a segurança e confiabilidade que NEM proporciona. Essa é a própria base da Plataforma NEM. Isso nos dá uma grande flexibilidade de uso de NEM como um instrumento financeiro eficiente.",
+
+      "nem-indepth-2": "O código fonte de NCC está disponível em $t(a.nccSource)",
+      "nem-indepth-3": "NEM $t(a.nisApi) recursos"
+
+   }
+}
